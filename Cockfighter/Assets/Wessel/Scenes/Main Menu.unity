@@ -968,6 +968,7 @@ GameObject:
   - component: {fileID: 667280035}
   - component: {fileID: 667280034}
   - component: {fileID: 667280033}
+  - component: {fileID: 667280036}
   m_Layer: 5
   m_Name: Panel
   m_TagString: Untagged
@@ -1060,6 +1061,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 667280031}
   m_CullTransparentMesh: 1
+--- !u!95 &667280036
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 667280031}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 11d8684c091aef147b0667dc9e784e81, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &669757509
 GameObject:
   m_ObjectHideFlags: 0
@@ -8114,6 +8134,7 @@ GameObject:
   - component: {fileID: 1970677099}
   - component: {fileID: 1970677101}
   - component: {fileID: 1970677100}
+  - component: {fileID: 1970677102}
   m_Layer: 5
   m_Name: Text (TMP)
   m_TagString: Untagged
@@ -8238,6 +8259,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1970677098}
   m_CullTransparentMesh: 1
+--- !u!95 &1970677102
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1970677098}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35fe9338e7fff764d999eeae915f39ce, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1986783589
 GameObject:
   m_ObjectHideFlags: 0
