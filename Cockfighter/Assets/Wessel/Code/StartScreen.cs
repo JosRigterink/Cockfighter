@@ -12,6 +12,7 @@ public class StartScreen : MonoBehaviour
         canvasses[0].SetActive(true);
         canvasses[1].SetActive(false);
     }
+
     public void PressAnywhere()
     {
         canvasses[0].SetActive(false);
