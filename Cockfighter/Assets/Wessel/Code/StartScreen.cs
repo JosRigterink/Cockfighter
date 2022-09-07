@@ -17,7 +17,6 @@ public class StartScreen : MonoBehaviour
         canvasses[0].SetActive(true);
         coins.SetActive(false);
     }
-
     public void Update()
     {
         if (canvasses[0].activeSelf == true)
@@ -33,7 +32,6 @@ public class StartScreen : MonoBehaviour
             coins.SetActive(true);
         }
     }
-
     void DeactivateAllCanvasses()
     {
         for (int i = 0; i < canvasses.Length; i++)
@@ -60,5 +58,29 @@ public class StartScreen : MonoBehaviour
     {
         DeactivateAllCanvasses();
         canvasses[4].SetActive(true);
+    }
+    public void AudioSettingsButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[5].SetActive(true);
+    }
+    public void GraphicsSettingsButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[6].SetActive(true);
+    }
+    public void ControlsSettingsButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[7].SetActive(true);
+    }
+    public void CreditsButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[8].SetActive(true);
+    }
+    public void ExitButton()
+    {
+        Application.Quit();
     }
 }
