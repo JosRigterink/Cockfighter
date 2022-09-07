@@ -21,6 +21,7 @@ public class StartScreen : MonoBehaviour
     {
         if (canvasses[0].activeSelf == true)
         {
+            coins.SetActive(false);
             if (Input.anyKey)
             {
                 DeactivateAllCanvasses();
@@ -81,6 +82,7 @@ public class StartScreen : MonoBehaviour
     }
     public void ExitButton()
     {
-        Application.Quit();
+        DeactivateAllCanvasses();
+        canvasses[0].SetActive(true);
     }
 }
