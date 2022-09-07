@@ -7,22 +7,53 @@ using UnityEngine.SceneManagement;
 public class StartScreen : MonoBehaviour
 {
     public GameObject[] canvasses;
+    public GameObject coins;
 
     void Start()
     {
+        DeactivateAllCanvasses();
         canvasses[0].SetActive(true);
-        canvasses[1].SetActive(false);
+        coins.SetActive(false);
     }
 
     public void Update()
     {
-        if (canvasses[0].activeInHierarchy == true)
+        if (canvasses[0].activeSelf == true)
         {
             if (Input.anyKey)
             {
-                canvasses[0].SetActive(false);
+                DeactivateAllCanvasses();
                 canvasses[1].SetActive(true);
+                coins.SetActive(true);
             }
         }
+    }
+
+    void DeactivateAllCanvasses()
+    {
+        for (int i = 0; i < canvasses.Length; i++)
+        {
+            canvasses[i].SetActive(false);
+        }
+    }
+    public void PlayButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[1].SetActive(true);
+    }
+    public void SkinButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[2].SetActive(true);
+    }
+    public void ShopButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[3].SetActive(true);
+    }
+    public void SettingsButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[4].SetActive(true);
     }
 }
