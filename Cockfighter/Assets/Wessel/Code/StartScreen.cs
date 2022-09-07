@@ -24,8 +24,11 @@ public class StartScreen : MonoBehaviour
             {
                 DeactivateAllCanvasses();
                 canvasses[1].SetActive(true);
-                coins.SetActive(true);
             }
+        }
+        else
+        {
+            coins.SetActive(true);
         }
     }
 
