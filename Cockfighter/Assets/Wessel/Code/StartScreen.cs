@@ -8,6 +8,8 @@ public class StartScreen : MonoBehaviour
 {
     public GameObject[] canvasses;
     public GameObject coins;
+    public GameObject stageSelectButton;
+    public bool isHost;
 
     void Start()
     {
