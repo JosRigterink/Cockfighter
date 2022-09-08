@@ -11,13 +11,13 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     [SerializeField] Image healthbarImage;
     [SerializeField] GameObject ui;
 
-    [SerializeField] float sprintSpeed, walkSpeed, smoothTime;
+    [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
 
     float verticalLookRotation;
-    Vector3 smoothMoveVelocity;
-    Vector3 moveAmount;
+    public Vector3 smoothMoveVelocity;
+    public  Vector3 moveAmount;
 
-    Rigidbody rb;
+    public Rigidbody rb;
 
     PhotonView PV;
 
@@ -63,14 +63,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         }
     }
 
-    void Move()
+   public void Move()
     {
         Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
         moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed), ref smoothMoveVelocity, smoothTime);
     }
 
-    void FixedUpdate()
+    public void FixedUpdate()
     {
         if (!PV.IsMine)
         {
