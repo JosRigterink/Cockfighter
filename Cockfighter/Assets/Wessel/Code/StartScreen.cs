@@ -19,7 +19,7 @@ public class StartScreen : MonoBehaviour
     }
     public void Update()
     {
-        if (canvasses[0].activeSelf == true)
+        if (canvasses[0].activeSelf == true || canvasses[8].activeSelf == true)
         {
             coins.SetActive(false);
             if (Input.anyKey)
