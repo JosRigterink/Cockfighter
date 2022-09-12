@@ -22,15 +22,24 @@ public class StartScreen : MonoBehaviour
         if (canvasses[0].activeSelf == true || canvasses[8].activeSelf == true)
         {
             coins.SetActive(false);
-            if (Input.anyKey)
-            {
-                DeactivateAllCanvasses();
-                canvasses[1].SetActive(true);
-            }
         }
         else
         {
             coins.SetActive(true);
+        }
+
+        if (Input.anyKey)
+        {
+            if (canvasses[0].activeSelf == true)
+            {
+                DeactivateAllCanvasses();
+                canvasses[1].SetActive(true);
+            }
+            if (canvasses[8].activeSelf == true)
+            {
+                DeactivateAllCanvasses();
+                canvasses[4].SetActive(true);
+            }
         }
 
         if (Input.GetButtonDown("Jump"))
