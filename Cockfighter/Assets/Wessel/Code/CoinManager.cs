@@ -9,12 +9,16 @@ public class CoinManager : MonoBehaviour
     public int coinsAmount;
     public TextMeshProUGUI coinsText;
 
-    void Start()
+    void Awake()
     {
         coinsText = GetComponent<TextMeshProUGUI>();
     }
     void Update()
     {
         coinsText.text = coinsAmount.ToString();
+    }
+    public void AddCoins(int coinsAdded)
+    {
+        coinsAmount += coinsAdded;
     }
 }

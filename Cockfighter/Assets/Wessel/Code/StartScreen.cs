@@ -32,6 +32,12 @@ public class StartScreen : MonoBehaviour
         {
             coins.SetActive(true);
         }
+
+        if (Input.GetButtonDown("Jump"))
+        {
+            Debug.Log("+ 100 coins");
+            GetComponent<CoinManager>().AddCoins(100);
+        }
     }
     void DeactivateAllCanvasses()
     {
