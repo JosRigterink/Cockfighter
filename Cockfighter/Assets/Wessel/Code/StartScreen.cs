@@ -35,7 +35,7 @@ public class StartScreen : MonoBehaviour
                 DeactivateAllCanvasses();
                 canvasses[1].SetActive(true);
             }
-            if (canvasses[8].activeSelf == true)
+            if (canvasses[5].activeSelf == true)
             {
                 DeactivateAllCanvasses();
                 canvasses[4].SetActive(true);
@@ -75,25 +75,15 @@ public class StartScreen : MonoBehaviour
         DeactivateAllCanvasses();
         canvasses[4].SetActive(true);
     }
-    public void AudioSettingsButton()
-    {
-        DeactivateAllCanvasses();
-        canvasses[5].SetActive(true);
-    }
-    public void GraphicsSettingsButton()
+    public void ControlsSettingsButton()
     {
         DeactivateAllCanvasses();
         canvasses[6].SetActive(true);
     }
-    public void ControlsSettingsButton()
-    {
-        DeactivateAllCanvasses();
-        canvasses[7].SetActive(true);
-    }
     public void CreditsButton()
     {
         DeactivateAllCanvasses();
-        canvasses[8].SetActive(true);
+        canvasses[5].SetActive(true);
     }
     public void ExitButton()
     {
