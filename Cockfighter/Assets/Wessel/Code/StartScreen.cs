@@ -35,7 +35,7 @@ public class StartScreen : MonoBehaviour
                 DeactivateAllCanvasses();
                 canvasses[1].SetActive(true);
             }
-            if (canvasses[5].activeSelf == true)
+            if (canvasses[5].activeSelf == true || canvasses[6].activeSelf == true)
             {
                 DeactivateAllCanvasses();
                 canvasses[4].SetActive(true);
@@ -89,5 +89,17 @@ public class StartScreen : MonoBehaviour
     {
         DeactivateAllCanvasses();
         canvasses[0].SetActive(true);
+    }
+    public void GraphicsLow()
+    {
+        QualitySettings.SetQualityLevel(0);
+    }
+    public void GraphicsMedium()
+    {
+        QualitySettings.SetQualityLevel(1);
+    }
+    public void GraphicsHigh()
+    {
+        QualitySettings.SetQualityLevel(2);
     }
 }
