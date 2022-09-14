@@ -1255,6 +1255,11 @@ PrefabInstance:
       propertyPath: m_WarningMessage
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 5867116050152472904, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867116050152472911, guid: 4d46924232b21304db326b2b502c59c7,
         type: 3}
       propertyPath: m_Name
