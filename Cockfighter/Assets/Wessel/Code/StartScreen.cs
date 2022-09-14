@@ -10,6 +10,7 @@ public class StartScreen : MonoBehaviour
     public GameObject coins;
     public GameObject stageSelectButton;
     public bool isHost;
+    public bool isFullscreen;
 
     void Start()
     {
@@ -90,16 +91,12 @@ public class StartScreen : MonoBehaviour
         DeactivateAllCanvasses();
         canvasses[0].SetActive(true);
     }
-    public void GraphicsLow()
+    public void SetFullScreen(bool isFullscreen)
     {
-        QualitySettings.SetQualityLevel(0);
+        Screen.fullScreen = isFullscreen;
     }
-    public void GraphicsMedium()
+    public void SetQuality(int qualityIndex)
     {
-        QualitySettings.SetQualityLevel(1);
-    }
-    public void GraphicsHigh()
-    {
-        QualitySettings.SetQualityLevel(2);
+        QualitySettings.SetQualityLevel(qualityIndex);
     }
 }
