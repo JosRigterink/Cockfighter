@@ -10,6 +10,7 @@ public class StartScreen : MonoBehaviour
     public GameObject[] canvasses;
     public GameObject coins;
     public GameObject stageSelectButton;
+    public Slider fullscreenSlider;
     public bool isHost;
     public bool isFullscreen;
     public TextMeshProUGUI roomButtonText;
@@ -19,6 +20,7 @@ public class StartScreen : MonoBehaviour
         DeactivateAllCanvasses();
         canvasses[0].SetActive(true);
         coins.SetActive(false);
+        fullscreenSlider.onValueChanged.AddListener(delegate { FullScreen(); });
     }
     void Awake()
     {
@@ -47,12 +49,6 @@ public class StartScreen : MonoBehaviour
                 DeactivateAllCanvasses();
                 canvasses[4].SetActive(true);
             }
-        }
-
-        if (Input.GetButtonDown("Jump"))
-        {
-            Debug.Log("+ 100 coins");
-            GetComponent<CoinManager>().AddCoins(100);
         }
     }
     void DeactivateAllCanvasses()
@@ -111,9 +107,9 @@ public class StartScreen : MonoBehaviour
         DeactivateAllCanvasses();
         canvasses[0].SetActive(true);
     }
-    public void SetFullScreen(bool isFullscreen)
+    public void FullScreen()
     {
-        Screen.fullScreen = isFullscreen;
+        Screen.fullScreen = !Screen.fullScreen;
     }
     public void SetQuality(int qualityIndex)
     {

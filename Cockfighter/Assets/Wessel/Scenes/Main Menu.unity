@@ -16845,6 +16845,7 @@ MonoBehaviour:
   - {fileID: 744270097}
   coins: {fileID: 805872484}
   stageSelectButton: {fileID: 1259730106}
+  fullscreenSlider: {fileID: 1710539216}
   isHost: 0
   isFullscreen: 1
   roomButtonText: {fileID: 1950290086}
