@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class StartScreen : MonoBehaviour
 {
@@ -11,12 +12,17 @@ public class StartScreen : MonoBehaviour
     public GameObject stageSelectButton;
     public bool isHost;
     public bool isFullscreen;
+    public TextMeshProUGUI roomButtonText;
 
     void Start()
     {
         DeactivateAllCanvasses();
         canvasses[0].SetActive(true);
         coins.SetActive(false);
+    }
+    void Awake()
+    {
+        roomButtonText = GetComponent<TextMeshProUGUI>();
     }
     public void Update()
     {
@@ -75,6 +81,20 @@ public class StartScreen : MonoBehaviour
     {
         DeactivateAllCanvasses();
         canvasses[4].SetActive(true);
+    }
+    public void RoomButton()
+    {
+        DeactivateAllCanvasses();
+        canvasses[7].SetActive(true);
+    }
+    public void CreateRoomButton()
+    {
+        Debug.Log("Create Room Button Pressed");
+    }
+    public void FindRoomButton()
+    {
+        Debug.Log("Find Room Button Pressed");
+        roomButtonText.text = "quit room";
     }
     public void ControlsSettingsButton()
     {
