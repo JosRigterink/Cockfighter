@@ -20,7 +20,6 @@ public class StartScreen : MonoBehaviour
         DeactivateAllCanvasses();
         canvasses[0].SetActive(true);
         coins.SetActive(false);
-        fullscreenSlider.onValueChanged.AddListener(delegate { FullScreen(); });
     }
     void Awake()
     {
@@ -49,6 +48,14 @@ public class StartScreen : MonoBehaviour
                 DeactivateAllCanvasses();
                 canvasses[4].SetActive(true);
             }
+        }
+        if (fullscreenSlider.value == 0)
+        {
+            Screen.fullScreen = false;
+        }
+        else
+        {
+            Screen.fullScreen = true;
         }
     }
     void DeactivateAllCanvasses()
@@ -105,11 +112,18 @@ public class StartScreen : MonoBehaviour
     public void ExitButton()
     {
         DeactivateAllCanvasses();
-        canvasses[0].SetActive(true);
+        Application.Quit();
     }
     public void FullScreen()
     {
-        Screen.fullScreen = !Screen.fullScreen;
+        if (fullscreenSlider.value == 0)
+        {
+            fullscreenSlider.value = 1;
+        }
+        else if (fullscreenSlider.value == 1)
+        {
+            fullscreenSlider.value = 0;
+        }
     }
     public void SetQuality(int qualityIndex)
     {
