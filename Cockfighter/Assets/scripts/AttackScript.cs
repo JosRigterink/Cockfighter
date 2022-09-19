@@ -58,10 +58,11 @@ public class AttackScript : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.X))
             {
+                //uppercut atack 
                 //attack(attackHitBoxes[2]);
             }
 
-            if (Time.time > blockCooldown && Input.GetKey(KeyCode.B))
+            if (Input.GetKey(KeyCode.B))
             {
                 blockPlaceHolder.SetActive(true);
             }
@@ -77,7 +78,6 @@ public class AttackScript : MonoBehaviour
     {
         attackRight.SetActive(false);
         attackLeft.SetActive(false);
-        blockPlaceHolder.SetActive(false);
     }
     
     public void attack(Collider col)

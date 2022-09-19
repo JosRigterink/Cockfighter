@@ -374,7 +374,7 @@ MonoBehaviour:
   damage: 0
   rightAttackCooldown: 0
   leftAttackCooldown: 0
-  blockCooldown: 2
+  blockCooldown: 0
 --- !u!1 &2117394307884062591
 GameObject:
   m_ObjectHideFlags: 0
