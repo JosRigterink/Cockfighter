@@ -9,6 +9,8 @@ TagManager:
   - AttackRight
   - HeadCollider
   - AttackLeft
+  - FollowCamera
+  - LookTag
   layers:
   - Default
   - TransparentFX

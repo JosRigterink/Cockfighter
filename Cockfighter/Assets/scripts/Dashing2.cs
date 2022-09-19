@@ -19,7 +19,7 @@ public class Dashing2 : MonoBehaviour
     void Update()
     {
        dashCooldown -= Time.deltaTime;
-        if (Input.GetKeyDown(KeyCode.E))
+        if (Input.GetKeyDown(KeyCode.LeftControl))
         {
             if(dashCooldown <= 0)
             {

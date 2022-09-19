@@ -12,6 +12,7 @@ public class AttackScript : MonoBehaviour
     public Collider[] attackHitBoxes;
     private PlayerController playerscript;
     public float damage;
+    public bool isBlocking;
 
 
     public float rightAttackCooldown;
@@ -35,7 +36,7 @@ public class AttackScript : MonoBehaviour
         if (pv.IsMine)
 
             {
-                if (Time.time > rightAttackCooldown && Input.GetKeyDown(KeyCode.C))
+                if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.E))
                 {
                     rightAttackCooldown = Time.time + 2f;
                     attack(attackHitBoxes[0]);
@@ -45,7 +46,7 @@ public class AttackScript : MonoBehaviour
                     Debug.Log("RightAttack");
                 }
 
-                if (Time.time > leftAttackCooldown && Input.GetKeyDown(KeyCode.Z))
+                if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKey(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.Q))
                 {
                     leftAttackCooldown = Time.time + 2f;
                     attack(attackHitBoxes[1]);
@@ -56,28 +57,30 @@ public class AttackScript : MonoBehaviour
                 }
             }
         {
+           
             if (Input.GetKeyDown(KeyCode.X))
             {
                 //uppercut atack 
                 //attack(attackHitBoxes[2]);
             }
 
-            if (Input.GetKey(KeyCode.B))
+            if (Time.time > blockCooldown && Input.GetKeyDown(KeyCode.Space))
             {
+                blockCooldown = Time.time + 5f;
+                isBlocking = true;
                 blockPlaceHolder.SetActive(true);
-            }
-            else
-            {
-                blockPlaceHolder.SetActive(false);
+                Invoke("StopAttack", 2f);
+                Debug.Log("Blocking");
             }
         }
-        
     }
 
     void StopAttack()
     {
         attackRight.SetActive(false);
         attackLeft.SetActive(false);
+        blockPlaceHolder.SetActive(false);
+        isBlocking = false;
     }
     
     public void attack(Collider col)

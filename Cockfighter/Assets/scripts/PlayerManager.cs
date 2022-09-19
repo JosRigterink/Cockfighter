@@ -10,6 +10,7 @@ public class PlayerManager : MonoBehaviour
     PhotonView pv;
 
     GameObject controller;
+    public MultipleTarget cameraFollow;
 
     void Awake()
     {
@@ -28,11 +29,14 @@ public class PlayerManager : MonoBehaviour
     {
         Transform spawnpoint = SpawnManager.Instance.GetSpawnPoint();
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), spawnpoint.position, spawnpoint.rotation, 0, new object[] { pv.ViewID });
+        cameraFollow = GameObject.FindGameObjectWithTag("FollowCamera").GetComponent<MultipleTarget>();
+        cameraFollow.players.Add(controller.transform);
     }
 
     public void Die()
     {
         PhotonNetwork.Destroy(controller);
+        cameraFollow.players.Remove(controller.transform);
         CreateController();
     }
 

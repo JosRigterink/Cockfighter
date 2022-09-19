@@ -20,31 +20,44 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public Rigidbody rb;
 
     PhotonView PV;
+    public MultipleTarget cameraFollowScript;
+    public GameObject lookAtPoint;
 
     const float maxHealth = 100f;
     public float currentHealth = maxHealth;
 
     PlayerManager playerManager;
+    public GameObject player;
 
 
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
+        cameraFollowScript = GameObject.FindGameObjectWithTag("FollowCamera").GetComponent<MultipleTarget>();
+        //lookAtPoint = GameObject.FindGameObjectWithTag("LookTag");
 
         playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>();
     }
 
     void Start()
     {
+        cameraFollowScript.players.Add(this.transform);
         Cursor.lockState = CursorLockMode.Locked;
+        //transform.LookAt(cam.transform);
+
+        player = GameObject.Find("PlayerController(Clone)");
+
+
+
+
         if (PV.IsMine)
         {
             Debug.Log("mine");
         }
         else
         {
-            Destroy(GetComponentInChildren<Camera>().gameObject);
+            //Destroy(GetComponentInChildren<LookAtScript>().gameObject);
             Destroy(rb);
         }
     }
@@ -53,6 +66,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     {
         if (!PV.IsMine)
         {
+            transform.LookAt(player.transform);
+            player.transform.LookAt(transform);
             return;
         }
         Move();
@@ -66,7 +81,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
    public void Move()
     {
         Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
-
         moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed), ref smoothMoveVelocity, smoothTime);
     }
 
