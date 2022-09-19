@@ -8,8 +8,16 @@ public class AttackScript : MonoBehaviour
     PhotonView pv;
     public GameObject attackRight;
     public GameObject attackLeft;
+    public GameObject blockPlaceHolder;
     public Collider[] attackHitBoxes;
     private PlayerController playerscript;
+    public float damage;
+
+
+    public float rightAttackCooldown;
+    public float leftAttackCooldown;
+    public float blockCooldown;
+    //public float damage;
     // Start is called before the first frame update
 
     private void Awake()
@@ -25,71 +33,74 @@ public class AttackScript : MonoBehaviour
     void Update()
     {
         if (pv.IsMine)
-        {
-            if (Input.GetKeyDown(KeyCode.C))
+
             {
-                attack(attackHitBoxes[0]);
-                //attackRight.SetActive(true);
-                //Invoke("StopAttack", 0.5f);
+                if (Time.time > rightAttackCooldown && Input.GetKeyDown(KeyCode.C))
+                {
+                    rightAttackCooldown = Time.time + 2f;
+                    attack(attackHitBoxes[0]);
+                    damage = 10;
+                    attackRight.SetActive(true);
+                    Invoke("StopAttack", 0.3f);
+                    Debug.Log("RightAttack");
+                }
+
+                if (Time.time > leftAttackCooldown && Input.GetKeyDown(KeyCode.Z))
+                {
+                    leftAttackCooldown = Time.time + 2f;
+                    attack(attackHitBoxes[1]);
+                    damage = 10;
+                    attackLeft.SetActive(true);
+                    Invoke("StopAttack", 0.3f);
+                    Debug.Log("LeftAttack");
+                }
             }
-            if (Input.GetKeyDown(KeyCode.Z))
+        {
+            if (Input.GetKeyDown(KeyCode.X))
             {
-                attack(attackHitBoxes[1]);
-               //attackLeft.SetActive(true);
-                //Invoke("StopAttack", 0.5f);
+                //attack(attackHitBoxes[2]);
             }
 
+            if (Time.time > blockCooldown && Input.GetKey(KeyCode.B))
+            {
+                blockPlaceHolder.SetActive(true);
+            }
+            else
+            {
+                blockPlaceHolder.SetActive(false);
+            }
         }
         
     }
-
-   //* private void OnTriggerEnter(Collider other)
-    //{
-        //if (other.gameObject.tag == "AttackRight")
-        //{
-          // Debug.Log("HitwithRight");
-          //playerscript.TakeDamage(10);   
-        //}
-       // if (other.gameObject.tag == "AttackLeft")
-        //{
-           // Debug.Log("hitwithleft");
-           // playerscript.TakeDamage(10);
-        //}
-   
-       //}
 
     void StopAttack()
     {
         attackRight.SetActive(false);
         attackLeft.SetActive(false);
+        blockPlaceHolder.SetActive(false);
     }
     
     public void attack(Collider col)
     {
-        Collider[] cols = Physics.OverlapBox(col.bounds.center, col.bounds.extents, col.transform.rotation, LayerMask.GetMask("HitBox"));
+       Collider[] cols = Physics.OverlapBox(col.bounds.center, col.bounds.extents, Quaternion.identity, LayerMask.GetMask("HitBox"));
         foreach (Collider c in cols)
         {
             if (c.transform.root == transform)
             continue;
-
+           
             Debug.Log(c.name);
 
             switch (c.name)
             {
                 case "Head":
-                    if (pv.IsMine)
-                    {
-                        playerscript.TakeDamage(30);
-                    }
+                    c.transform.root.gameObject.GetComponent<PlayerController>().TakeDamage(damage * 2);
                     break;
                 case "Body":
-                    playerscript.TakeDamage(10);
+                    c.transform.root.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
                     break;
                 default:
-                    Debug.Log("Couldnt found any colliders");
+                    Debug.Log("Couldnt find any colliders");
                         break;
-                
-
             }
         }
     }
