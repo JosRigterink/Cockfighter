@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Photon.Pun;
 using Hashtable = ExitGames.Client.Photon.Hashtable;
 using Photon.Realtime;
+using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
@@ -18,6 +19,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public  Vector3 moveAmount;
 
     public Rigidbody rb;
+
+    public Animator animator;
 
     PhotonView PV;
     public MultipleTarget cameraFollowScript;
@@ -84,6 +87,23 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
    public void Move()
     {
         Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
+
+        animator.SetFloat("X", Input.GetAxisRaw("Horizontal"));
+        animator.SetFloat("Y", Input.GetAxisRaw("Vertical"));
+        if(Input.GetAxisRaw("Vertical") != 0f)
+        {
+            animator.SetLayerWeight(1, 1);
+        }
+        else
+        {
+            animator.SetLayerWeight(1, 0);
+        }
+        if (Input.GetAxisRaw("Horizontal") != 0f)
+        {
+            animator.SetLayerWeight(1, 1);
+        }
+
+
         moveAmount = Vector3.SmoothDamp(moveAmount, moveDir * (Input.GetKey(KeyCode.LeftShift) ? sprintSpeed : walkSpeed), ref smoothMoveVelocity, smoothTime);
     }
 

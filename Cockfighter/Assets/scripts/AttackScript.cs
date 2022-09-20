@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
+using UnityEngine.Animations;
 
 public class AttackScript : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class AttackScript : MonoBehaviour
     public float damage;
     public bool isBlocking;
 
+    public Animator animator;
 
     public float rightAttackCooldown;
     public float leftAttackCooldown;
@@ -39,6 +41,8 @@ public class AttackScript : MonoBehaviour
                 //Right Uppercut
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.E))
                 {
+                    animator.SetLayerWeight(2, 1);
+                    animator.Play("Right Uppercut", 2);
                     rightAttackCooldown = Time.time + 5f;
                     attack(attackHitBoxes[0]);
                     damage = Random.Range(15,20);
@@ -49,6 +53,8 @@ public class AttackScript : MonoBehaviour
             else //Right Hook
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.E))
                 {
+                    animator.SetLayerWeight(2, 1);
+                    animator.Play("Right Hook", 2);
                     rightAttackCooldown = Time.time + 2f;
                     attack(attackHitBoxes[0]);
                     damage = Random.Range(8, 13);
@@ -59,16 +65,22 @@ public class AttackScript : MonoBehaviour
              else //Right Jab
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKeyDown(KeyCode.E))
                 {
+                    animator.SetLayerWeight(2, 1);
+                    animator.Play("Right Jab", 2);
                     rightAttackCooldown = Time.time + 1f;
                     attack(attackHitBoxes[0]);
                     damage = Random.Range(3, 7);
                     attackRight.SetActive(true);
                     Invoke("StopAttack", 0.1f);
+                    //animator.SetLayerWeight(2, 0);
+                    //animator.
                     Debug.Log("RightJab");
                 }
                 //Left Uppercut
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.Q))
                 {
+                    animator.SetLayerWeight(2, 1);
+                    animator.Play("Left Uppercut", 2);
                     leftAttackCooldown = Time.time + 5f;
                     attack(attackHitBoxes[1]);
                     damage = Random.Range(15, 20);
@@ -80,6 +92,8 @@ public class AttackScript : MonoBehaviour
             else //Left Hook
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKey(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.Q))
                 {
+                    animator.SetLayerWeight(2, 1);
+                    animator.Play("Left Hook", 2);
                     leftAttackCooldown = Time.time + 2f;
                     attack(attackHitBoxes[1]);
                     damage = Random.Range(8, 13);
@@ -90,6 +104,8 @@ public class AttackScript : MonoBehaviour
              else //Left Jab
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKeyDown(KeyCode.Q))
                 {
+                    animator.SetLayerWeight(2, 1);
+                    animator.Play("Left Jab", 2);
                     leftAttackCooldown = Time.time + 1f;
                     attack(attackHitBoxes[1]);
                     damage = Random.Range(3, 7);
@@ -99,13 +115,6 @@ public class AttackScript : MonoBehaviour
                 }
         }
         {
-           
-            if (Input.GetKeyDown(KeyCode.X))
-            {
-                //uppercut atack 
-                //attack(attackHitBoxes[2]);
-            }
-
             if (Time.time > blockCooldown && Input.GetKeyDown(KeyCode.Space))
             {
                 blockCooldown = Time.time + 5f;
