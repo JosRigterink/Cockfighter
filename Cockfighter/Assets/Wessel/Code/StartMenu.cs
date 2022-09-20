@@ -5,9 +5,10 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
 
-public class StartScreen : MonoBehaviour
+public class StartMenu : MonoBehaviour
 {
     public GameObject[] canvasses;
+    public GameObject[] skinMenuPages;
     public GameObject coins;
     public GameObject stageSelectButton;
     public Slider fullscreenSlider;
@@ -18,7 +19,9 @@ public class StartScreen : MonoBehaviour
     void Start()
     {
         DeactivateAllCanvasses();
+        DeactivateAllSkinMenuPages();
         canvasses[0].SetActive(true);
+        skinMenuPages[0].SetActive(true);
         coins.SetActive(false);
     }
     void Awake()
@@ -63,6 +66,13 @@ public class StartScreen : MonoBehaviour
         for (int i = 0; i < canvasses.Length; i++)
         {
             canvasses[i].SetActive(false);
+        }
+    }
+    void DeactivateAllSkinMenuPages()
+    {
+        for (int i = 0; i < skinMenuPages.Length; i++)
+        {
+            skinMenuPages[i].SetActive(false);
         }
     }
     public void PlayButton()
@@ -128,5 +138,30 @@ public class StartScreen : MonoBehaviour
     public void SetQuality(int qualityIndex)
     {
         QualitySettings.SetQualityLevel(qualityIndex);
+    }
+    public void SkinMenuChickenButton()
+    {
+        DeactivateAllSkinMenuPages();
+        skinMenuPages[0].SetActive(true);
+    }
+    public void SkinMenuColorButton()
+    {
+        DeactivateAllSkinMenuPages();
+        skinMenuPages[1].SetActive(true);
+    }
+    public void SkinMenuHatButton()
+    {
+        DeactivateAllSkinMenuPages();
+        skinMenuPages[2].SetActive(true);
+    }
+    public void SkinMenuTopButton()
+    {
+        DeactivateAllSkinMenuPages();
+        skinMenuPages[3].SetActive(true);
+    }
+    public void SkinMenuBottomButton()
+    {
+        DeactivateAllSkinMenuPages();
+        skinMenuPages[4].SetActive(true);
     }
 }
