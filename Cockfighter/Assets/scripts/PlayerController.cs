@@ -66,8 +66,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     {
         if (!PV.IsMine)
         {
-            transform.LookAt(player.transform);
-            player.transform.LookAt(transform);
+            if (cameraFollowScript.players.Contains(transform) && cameraFollowScript.players.Contains(player.transform))
+            {
+                transform.LookAt(player.transform);
+                player.transform.LookAt(transform);
+            }        
             return;
         }
         Move();

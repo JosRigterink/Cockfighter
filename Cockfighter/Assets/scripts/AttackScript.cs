@@ -36,26 +36,68 @@ public class AttackScript : MonoBehaviour
         if (pv.IsMine)
 
             {
+                //Right Uppercut
+                if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.E))
+                {
+                    rightAttackCooldown = Time.time + 5f;
+                    attack(attackHitBoxes[0]);
+                    damage = Random.Range(15,20);
+                    attackRight.SetActive(true);
+                    Invoke("StopAttack", 0.5f);
+                    Debug.Log("RightUppercut");
+                }
+            else //Right Hook
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.E))
                 {
                     rightAttackCooldown = Time.time + 2f;
                     attack(attackHitBoxes[0]);
-                    damage = 10;
+                    damage = Random.Range(8, 13);
                     attackRight.SetActive(true);
                     Invoke("StopAttack", 0.3f);
-                    Debug.Log("RightAttack");
+                    Debug.Log("RightHook");
+                }
+             else //Right Jab
+                if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKeyDown(KeyCode.E))
+                {
+                    rightAttackCooldown = Time.time + 1f;
+                    attack(attackHitBoxes[0]);
+                    damage = Random.Range(3, 7);
+                    attackRight.SetActive(true);
+                    Invoke("StopAttack", 0.1f);
+                    Debug.Log("RightJab");
+                }
+                //Left Uppercut
+                if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.Q))
+                {
+                    leftAttackCooldown = Time.time + 5f;
+                    attack(attackHitBoxes[1]);
+                    damage = Random.Range(15, 20);
+                    attackLeft.SetActive(true);
+                    Invoke("StopAttack", 0.5f);
+                    Debug.Log("LeftUppercut");
                 }
 
+            else //Left Hook
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKey(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.Q))
                 {
                     leftAttackCooldown = Time.time + 2f;
                     attack(attackHitBoxes[1]);
-                    damage = 10;
+                    damage = Random.Range(8, 13);
                     attackLeft.SetActive(true);
                     Invoke("StopAttack", 0.3f);
-                    Debug.Log("LeftAttack");
+                    Debug.Log("LeftHook");
                 }
-            }
+             else //Left Jab
+                if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKeyDown(KeyCode.Q))
+                {
+                    leftAttackCooldown = Time.time + 1f;
+                    attack(attackHitBoxes[1]);
+                    damage = Random.Range(3, 7);
+                    attackLeft.SetActive(true);
+                    Invoke("StopAttack", 0.1f);
+                    Debug.Log("LeftJab");
+                }
+        }
         {
            
             if (Input.GetKeyDown(KeyCode.X))
