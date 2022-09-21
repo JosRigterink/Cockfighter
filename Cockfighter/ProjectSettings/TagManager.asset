@@ -3,7 +3,14 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - SpawnManager
+  - Attack
+  - AttackRight
+  - HeadCollider
+  - AttackLeft
+  - FollowCamera
+  - LookTag
   layers:
   - Default
   - TransparentFX
@@ -11,7 +18,7 @@ TagManager:
   - Post Processing
   - Water
   - UI
-  - 
+  - HitBox
   - 
   - 
   - 
