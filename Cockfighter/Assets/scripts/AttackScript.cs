@@ -119,11 +119,10 @@ public class AttackScript : MonoBehaviour
                     Invoke("StopAttack", 0.1f);
                     Debug.Log("LeftJab");
                 }
-        }
-        {
             if (Time.time > blockCooldown && Input.GetKeyDown(KeyCode.Space))
             {
                 animator.SetTrigger("Block");
+                animator.SetLayerWeight(4, 1);
                 //animator.Play("Block", 0);
                 blockCooldown = Time.time + 5f;
                 isBlocking = true;

@@ -1594,6 +1594,8 @@ MonoBehaviour:
     LayerIndex: 2
   - SynchronizeType: 1
     LayerIndex: 3
+  - SynchronizeType: 1
+    LayerIndex: 4
 --- !u!1001 &4543178144191883013
 PrefabInstance:
   m_ObjectHideFlags: 0
