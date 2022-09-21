@@ -4019,7 +4019,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Armature/Lower Torso
+    path: Armature/Right Upper Leg/Right Lower Leg/Right Foot
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4029,7 +4029,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Armature/Lower Torso
+    path: Armature/Right Upper Leg/Right Lower Leg/Right Foot
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4039,7 +4039,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Armature/Lower Torso
+    path: Armature/Right Upper Leg/Right Lower Leg/Right Foot
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4229,7 +4229,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.x
-    path: Armature/Right Upper Leg/Right Lower Leg/Right Foot
+    path: Armature/Lower Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4239,7 +4239,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.y
-    path: Armature/Right Upper Leg/Right Lower Leg/Right Foot
+    path: Armature/Lower Torso
     classID: 4
     script: {fileID: 0}
   - curve:
@@ -4249,7 +4249,7 @@ AnimationClip:
       m_PostInfinity: 2
       m_RotationOrder: 4
     attribute: m_LocalEulerAngles.z
-    path: Armature/Right Upper Leg/Right Lower Leg/Right Foot
+    path: Armature/Lower Torso
     classID: 4
     script: {fileID: 0}
   m_HasGenericRootTransform: 0

@@ -1528,19 +1528,19 @@ MonoBehaviour:
     SynchronizeType: 1
     Name: Blend
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: X
   - Type: 1
-    SynchronizeType: 0
+    SynchronizeType: 2
     Name: Y
   m_SynchronizeLayers:
   - SynchronizeType: 2
     LayerIndex: 0
-  - SynchronizeType: 1
+  - SynchronizeType: 2
     LayerIndex: 1
   - SynchronizeType: 1
     LayerIndex: 2
-  - SynchronizeType: 1
+  - SynchronizeType: 2
     LayerIndex: 3
 --- !u!1001 &4543178144191883013
 PrefabInstance:
@@ -1549,10 +1549,60 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9053267911817482586}
     m_Modifications:
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.0166
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.0118
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7328611
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.6803783
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -3.6032615e-25
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -3.48621e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1249114882967119137, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5867116050152472904, guid: 4d46924232b21304db326b2b502c59c7,
         type: 3}
       propertyPath: m_ApplyRootMotion
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5867116050152472911, guid: 4d46924232b21304db326b2b502c59c7,
         type: 3}

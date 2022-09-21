@@ -51,8 +51,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
         player = GameObject.Find("PlayerController(Clone)");
 
-
-
+        animator.applyRootMotion = true;
 
         if (PV.IsMine)
         {
@@ -88,8 +87,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     {
         Vector3 moveDir = new Vector3(Input.GetAxisRaw("Horizontal"), 0, Input.GetAxisRaw("Vertical")).normalized;
 
-        animator.SetFloat("X", Input.GetAxisRaw("Horizontal"));
-        animator.SetFloat("Y", Input.GetAxisRaw("Vertical"));
+        animator.SetFloat("X", Input.GetAxis("Horizontal"));
+        animator.SetFloat("Y", Input.GetAxis("Vertical"));
         if(Input.GetAxisRaw("Vertical") != 0f)
         {
             animator.SetLayerWeight(1, 1);
