@@ -12,6 +12,7 @@ public class StartMenu : MonoBehaviour
     public GameObject coins;
     public GameObject stageSelectButton;
     public GameObject usernameInputField;
+    public GameObject usernameInputExitButton;
     //public GameObject usernameDisplay;
     //public GameObject usernameGameObject;
     public Slider fullscreenSlider;
@@ -26,7 +27,8 @@ public class StartMenu : MonoBehaviour
         DeactivateAllSkinMenuPages();
         canvasses[0].SetActive(true);
         skinMenuPages[0].SetActive(true);
-        //usernameInputField.SetActive(false);
+        usernameInputField.SetActive(false);
+        usernameInputExitButton.SetActive(false);
         //usernameGameObject.SetActive(false);
         coins.SetActive(false);
     }
@@ -177,7 +179,8 @@ public class StartMenu : MonoBehaviour
     public void EnterUsernameButton()
     {
         //usernameGameObject.SetActive(true);
-        //usernameInputField.SetActive(true);
+        usernameInputField.SetActive(true);
+        usernameInputExitButton.SetActive(true);
     }
     public void UsernameOnEndEdit()
     {
@@ -187,7 +190,8 @@ public class StartMenu : MonoBehaviour
     public void UsernameDoneButton()
     {
         //usernameGameObject.SetActive(false);
-        //usernameInputField.SetActive(false);
+        usernameInputField.SetActive(false);
+        usernameInputExitButton.SetActive(false);
         //usernameText.text = usernameInputField.GetComponent<Text>().text;
         //usernameDisplay.GetComponent<Text>().text = usernameText.text;
     }
