@@ -122,7 +122,7 @@ public class AttackScript : MonoBehaviour
             if (Time.time > blockCooldown && Input.GetKeyDown(KeyCode.Space))
             {
                 animator.SetTrigger("Block");
-                animator.SetLayerWeight(4, 1);
+                //animator.SetLayerWeight(4, 1);
                 //animator.Play("Block", 0);
                 blockCooldown = Time.time + 5f;
                 isBlocking = true;

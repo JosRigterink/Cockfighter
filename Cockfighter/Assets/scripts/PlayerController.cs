@@ -20,6 +20,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     public Rigidbody rb;
 
+    public AttackScript attackScript;
+
     public Animator animator;
 
     PhotonView PV;
@@ -31,6 +33,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     PlayerManager playerManager;
     public GameObject player;
+    public GameObject ragdoll;
 
 
     void Awake()
@@ -123,10 +126,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     [PunRPC]
     void RPC_TakeDamage(float damage)
     {
-        if (!PV.IsMine)
-        {
-            return;
-        }
+        //if (!PV.IsMine)
+        //{
+          //  return;
+        //}
         currentHealth -= damage;
 
         healthbarImage.fillAmount = currentHealth / maxHealth;
@@ -139,6 +142,20 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     void Die()
     {
+        //this.gameObject.transform.ge
+        foreach (Transform child in transform)
+        {
+            child.gameObject.SetActive(false);
+        }
+        attackScript.enabled = false;
+        GetComponent<CapsuleCollider>().enabled = false;
+        GetComponent<PhotonTransformView>().enabled = false;
+
+        ragdoll.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
+
+        walkSpeed = 0;
+
+        ragdoll.SetActive(true);
         playerManager.Die();
     }
 }

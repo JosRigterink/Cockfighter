@@ -11,6 +11,7 @@ TagManager:
   - AttackLeft
   - FollowCamera
   - LookTag
+  - RagDoll
   layers:
   - Default
   - TransparentFX
