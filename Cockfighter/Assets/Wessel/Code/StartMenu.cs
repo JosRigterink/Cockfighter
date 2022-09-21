@@ -12,13 +12,13 @@ public class StartMenu : MonoBehaviour
     public GameObject coins;
     public GameObject stageSelectButton;
     public GameObject usernameInputField;
-    public GameObject usernameDisplay;
-    public GameObject usernameGameObject;
+    //public GameObject usernameDisplay;
+    //public GameObject usernameGameObject;
     public Slider fullscreenSlider;
     public bool isHost;
     public bool isFullscreen;
-    public TextMeshProUGUI roomButtonText;
-    public TextMeshProUGUI usernameText;
+    //public TextMeshProUGUI roomButtonText;
+    //public TextMeshProUGUI usernameText;
 
     void Start()
     {
@@ -26,8 +26,8 @@ public class StartMenu : MonoBehaviour
         DeactivateAllSkinMenuPages();
         canvasses[0].SetActive(true);
         skinMenuPages[0].SetActive(true);
-        usernameInputField.SetActive(false);
-        usernameGameObject.SetActive(false);
+        //usernameInputField.SetActive(false);
+        //usernameGameObject.SetActive(false);
         coins.SetActive(false);
     }
     void Awake()
@@ -68,8 +68,8 @@ public class StartMenu : MonoBehaviour
             Screen.fullScreen = true;
         }
 
-        roomButtonText = GetComponent<TextMeshProUGUI>();
-        usernameText = GetComponent<TextMeshProUGUI>();
+        //roomButtonText = GetComponent<TextMeshProUGUI>();
+        //usernameText = GetComponent<TextMeshProUGUI>();
     }
     void DeactivateAllCanvasses()
     {
@@ -117,7 +117,7 @@ public class StartMenu : MonoBehaviour
     public void FindRoomButton()
     {
         Debug.Log("Find Room Button Pressed");
-        roomButtonText.text = "quit room";
+        //roomButtonText.text = "quit room";
     }
     public void ControlsSettingsButton()
     {
@@ -176,19 +176,19 @@ public class StartMenu : MonoBehaviour
     }
     public void EnterUsernameButton()
     {
-        usernameGameObject.SetActive(true);
-        usernameInputField.SetActive(true);
+        //usernameGameObject.SetActive(true);
+        //usernameInputField.SetActive(true);
     }
     public void UsernameOnEndEdit()
     {
-        usernameText.text = usernameInputField.GetComponent<Text>().text;
-        usernameDisplay.GetComponent<Text>().text = usernameText.text;
+        //usernameText.text = usernameInputField.GetComponent<Text>().text;
+        //usernameDisplay.GetComponent<Text>().text = usernameText.text;
     }
     public void UsernameDoneButton()
     {
-        usernameGameObject.SetActive(false);
-        usernameInputField.SetActive(false);
-        usernameText.text = usernameInputField.GetComponent<Text>().text;
-        usernameDisplay.GetComponent<Text>().text = usernameText.text;
+        //usernameGameObject.SetActive(false);
+        //usernameInputField.SetActive(false);
+        //usernameText.text = usernameInputField.GetComponent<Text>().text;
+        //usernameDisplay.GetComponent<Text>().text = usernameText.text;
     }
 }
