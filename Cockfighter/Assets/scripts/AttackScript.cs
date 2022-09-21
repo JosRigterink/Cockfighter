@@ -41,8 +41,9 @@ public class AttackScript : MonoBehaviour
                 //Right Uppercut
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKey(KeyCode.RightArrow) && Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.E))
                 {
+                    animator.SetTrigger("Right Uppercut");
                     animator.SetLayerWeight(2, 1);
-                    animator.Play("Right Uppercut", 2);
+                    //animator.Play("Right Uppercut", 2);
                     rightAttackCooldown = Time.time + 5f;
                     attack(attackHitBoxes[0]);
                     damage = Random.Range(15,20);
@@ -53,8 +54,9 @@ public class AttackScript : MonoBehaviour
             else //Right Hook
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.E))
                 {
+                    animator.SetTrigger("Right Hook");
                     animator.SetLayerWeight(2, 1);
-                    animator.Play("Right Hook", 2);
+                    //animator.Play("Right Hook", 2);
                     rightAttackCooldown = Time.time + 2f;
                     attack(attackHitBoxes[0]);
                     damage = Random.Range(8, 13);
@@ -65,8 +67,9 @@ public class AttackScript : MonoBehaviour
              else //Right Jab
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKeyDown(KeyCode.E))
                 {
+                    animator.SetTrigger("Right Jab");
                     animator.SetLayerWeight(2, 1);
-                    animator.Play("Right Jab", 2);
+                    //animator.Play("Right Jab", 2);
                     rightAttackCooldown = Time.time + 1f;
                     attack(attackHitBoxes[0]);
                     damage = Random.Range(3, 7);
@@ -79,8 +82,9 @@ public class AttackScript : MonoBehaviour
                 //Left Uppercut
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.Q))
                 {
+                    animator.SetTrigger("Left Uppercut");
                     animator.SetLayerWeight(2, 1);
-                    animator.Play("Left Uppercut", 2);
+                    //animator.Play("Left Uppercut", 2);
                     leftAttackCooldown = Time.time + 5f;
                     attack(attackHitBoxes[1]);
                     damage = Random.Range(15, 20);
@@ -92,8 +96,9 @@ public class AttackScript : MonoBehaviour
             else //Left Hook
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKey(KeyCode.LeftArrow) && Input.GetKeyDown(KeyCode.Q))
                 {
+                    animator.SetTrigger("Left Hook");
                     animator.SetLayerWeight(2, 1);
-                    animator.Play("Left Hook", 2);
+                    //animator.Play("Left Hook", 2);
                     leftAttackCooldown = Time.time + 2f;
                     attack(attackHitBoxes[1]);
                     damage = Random.Range(8, 13);
@@ -104,8 +109,9 @@ public class AttackScript : MonoBehaviour
              else //Left Jab
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKeyDown(KeyCode.Q))
                 {
+                    animator.SetTrigger("Left Jab");
                     animator.SetLayerWeight(2, 1);
-                    animator.Play("Left Jab", 2);
+                    //animator.Play("Left Jab", 2);
                     leftAttackCooldown = Time.time + 1f;
                     attack(attackHitBoxes[1]);
                     damage = Random.Range(3, 7);
@@ -117,6 +123,8 @@ public class AttackScript : MonoBehaviour
         {
             if (Time.time > blockCooldown && Input.GetKeyDown(KeyCode.Space))
             {
+                animator.SetTrigger("Block");
+                //animator.Play("Block", 0);
                 blockCooldown = Time.time + 5f;
                 isBlocking = true;
                 blockPlaceHolder.SetActive(true);
