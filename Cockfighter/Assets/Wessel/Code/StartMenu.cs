@@ -11,10 +11,14 @@ public class StartMenu : MonoBehaviour
     public GameObject[] skinMenuPages;
     public GameObject coins;
     public GameObject stageSelectButton;
+    public GameObject usernameInputField;
+    public GameObject usernameDisplay;
+    public GameObject usernameGameObject;
     public Slider fullscreenSlider;
     public bool isHost;
     public bool isFullscreen;
     public TextMeshProUGUI roomButtonText;
+    public TextMeshProUGUI usernameText;
 
     void Start()
     {
@@ -22,15 +26,18 @@ public class StartMenu : MonoBehaviour
         DeactivateAllSkinMenuPages();
         canvasses[0].SetActive(true);
         skinMenuPages[0].SetActive(true);
+        usernameInputField.SetActive(false);
+        usernameGameObject.SetActive(false);
         coins.SetActive(false);
     }
     void Awake()
     {
         roomButtonText = GetComponent<TextMeshProUGUI>();
+        usernameText = GetComponent<TextMeshProUGUI>();
     }
     public void Update()
     {
-        if (canvasses[0].activeSelf == true || canvasses[5].activeSelf == true)
+        if (canvasses[0].activeSelf == true || canvasses[5].activeSelf == true || canvasses[8].activeSelf == true)
         {
             coins.SetActive(false);
         }
@@ -163,5 +170,22 @@ public class StartMenu : MonoBehaviour
     {
         DeactivateAllSkinMenuPages();
         skinMenuPages[4].SetActive(true);
+    }
+    public void EnterUsernameButton()
+    {
+        usernameGameObject.SetActive(true);
+        usernameInputField.SetActive(true);
+    }
+    public void UsernameOnEndEdit()
+    {
+        usernameText.text = usernameInputField.GetComponent<Text>().text;
+        usernameDisplay.GetComponent<Text>().text = usernameText.text;
+    }
+    public void UsernameDoneButton()
+    {
+        usernameGameObject.SetActive(false);
+        usernameInputField.SetActive(false);
+        usernameText.text = usernameInputField.GetComponent<Text>().text;
+        usernameDisplay.GetComponent<Text>().text = usernameText.text;
     }
 }
