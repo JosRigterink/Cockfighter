@@ -32,8 +32,8 @@ public class StartMenu : MonoBehaviour
     }
     void Awake()
     {
-        roomButtonText = GetComponent<TextMeshProUGUI>();
-        usernameText = GetComponent<TextMeshProUGUI>();
+        //roomButtonText = GetComponent<TextMeshProUGUI>();
+        //usernameText = GetComponent<TextMeshProUGUI>();
     }
     public void Update()
     {
@@ -67,6 +67,9 @@ public class StartMenu : MonoBehaviour
         {
             Screen.fullScreen = true;
         }
+
+        roomButtonText = GetComponent<TextMeshProUGUI>();
+        usernameText = GetComponent<TextMeshProUGUI>();
     }
     void DeactivateAllCanvasses()
     {
