@@ -79,6 +79,8 @@ public class StartMenu : MonoBehaviour
     {
         DeactivateAllCanvasses();
         canvasses[2].SetActive(true);
+        DeactivateAllSkinMenuPages();
+        skinMenuPages[0].SetActive(true);
     }
     public void ShopButton()
     {
