@@ -45,8 +45,8 @@ public class AttackScript : MonoBehaviour
                     animator.SetLayerWeight(2, 1);
                     //animator.Play("Right Uppercut", 2);
                     rightAttackCooldown = Time.time + 5f;
-                    attack(attackHitBoxes[0]);
-                    damage = Random.Range(15,20);
+                    attack(attackHitBoxes[4]);
+                    damage = 12;
                     attackRight.SetActive(true);
                     Invoke("StopAttack", 0.5f);
                     Debug.Log("RightUppercut");
@@ -58,8 +58,8 @@ public class AttackScript : MonoBehaviour
                     animator.SetLayerWeight(2, 1);
                     //animator.Play("Right Hook", 2);
                     rightAttackCooldown = Time.time + 2f;
-                    attack(attackHitBoxes[0]);
-                    damage = Random.Range(8, 13);
+                    attack(attackHitBoxes[2]);
+                    damage = 8;
                     attackRight.SetActive(true);
                     Invoke("StopAttack", 0.3f);
                     Debug.Log("RightHook");
@@ -72,7 +72,7 @@ public class AttackScript : MonoBehaviour
                     //animator.Play("Right Jab", 2);
                     rightAttackCooldown = Time.time + 1f;
                     attack(attackHitBoxes[0]);
-                    damage = Random.Range(3, 7);
+                    damage = 5;
                     attackRight.SetActive(true);
                     Invoke("StopAttack", 0.1f);
                     //animator.SetLayerWeight(2, 0);
@@ -86,8 +86,8 @@ public class AttackScript : MonoBehaviour
                     animator.SetLayerWeight(2, 1);
                     //animator.Play("Left Uppercut", 2);
                     leftAttackCooldown = Time.time + 5f;
-                    attack(attackHitBoxes[1]);
-                    damage = Random.Range(15, 20);
+                    attack(attackHitBoxes[5]);
+                    damage = 12;
                     attackLeft.SetActive(true);
                     Invoke("StopAttack", 0.5f);
                     Debug.Log("LeftUppercut");
@@ -100,8 +100,8 @@ public class AttackScript : MonoBehaviour
                     animator.SetLayerWeight(2, 1);
                     //animator.Play("Left Hook", 2);
                     leftAttackCooldown = Time.time + 2f;
-                    attack(attackHitBoxes[1]);
-                    damage = Random.Range(8, 13);
+                    attack(attackHitBoxes[3]);
+                    damage = 8;
                     attackLeft.SetActive(true);
                     Invoke("StopAttack", 0.3f);
                     Debug.Log("LeftHook");
@@ -114,7 +114,7 @@ public class AttackScript : MonoBehaviour
                     //animator.Play("Left Jab", 2);
                     leftAttackCooldown = Time.time + 1f;
                     attack(attackHitBoxes[1]);
-                    damage = Random.Range(3, 7);
+                    damage = 5;
                     attackLeft.SetActive(true);
                     Invoke("StopAttack", 0.1f);
                     Debug.Log("LeftJab");
