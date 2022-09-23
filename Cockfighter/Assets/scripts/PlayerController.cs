@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
 
+    [SerializeField] public GameObject chicken;
+
     float verticalLookRotation;
     public Vector3 smoothMoveVelocity;
     public  Vector3 moveAmount;
@@ -50,7 +52,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     {
         cameraFollowScript.players.Add(this.transform);
         Cursor.lockState = CursorLockMode.Locked;
-        //transform.LookAt(cam.transform);
 
         player = GameObject.Find("PlayerController(Clone)");
 
@@ -62,7 +63,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         }
         else
         {
-            //Destroy(GetComponentInChildren<LookAtScript>().gameObject);
             Destroy(rb);
             Destroy(ui);
         }
@@ -74,8 +74,16 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         {
             if (cameraFollowScript.players.Contains(transform) && cameraFollowScript.players.Contains(player.transform))
             {
-                transform.LookAt(player.transform);
-                player.transform.LookAt(transform);
+                if (chicken.activeSelf)
+                {
+                    transform.LookAt(player.transform);
+                    player.transform.LookAt(transform);
+                }
+                else
+                {
+                    transform.LookAt(transform);
+                    player.transform.LookAt(cameraFollowScript.gameObject.transform);
+                }
             }        
             return;
         }
@@ -127,10 +135,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     [PunRPC]
     void RPC_TakeDamage(float damage)
     {
-        if (!PV.IsMine)
-        {
-            return;
-        }
+        //if (!PV.IsMine)
+        //{
+            //return;
+        //}
         currentHealth -= damage;
 
         healthbarImage.fillAmount = currentHealth / maxHealth;
@@ -143,20 +151,22 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     void Die()
     {
-        //this.gameObject.transform.ge
-        foreach (Transform child in transform)
+        if (PV.IsMine)
         {
-            child.gameObject.SetActive(false);
-        }
-        attackScript.enabled = false;
-        GetComponent<CapsuleCollider>().enabled = false;
-        GetComponent<PhotonTransformView>().enabled = false;
+            foreach (Transform child in transform)
+            {
+                child.gameObject.SetActive(false);
+            }
 
-        ragdoll.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
+            GameObject copy = PhotonNetwork.Instantiate(ragdoll.name, transform.position - new Vector3(0, 1, 0), transform.rotation);
+            copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 50, ragdoll.transform.localPosition.z - 50));
 
-        walkSpeed = 0;
+            GetComponent<PhotonTransformView>().enabled = false;
 
-        ragdoll.SetActive(true);
-        playerManager.Die();
+            walkSpeed = 0;
+            attackScript.enabled = false;
+
+            playerManager.Die();
+        } 
     }
 }

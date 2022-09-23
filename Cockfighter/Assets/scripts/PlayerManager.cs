@@ -35,7 +35,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Die()
     {
-        //PhotonNetwork.Destroy(controller);
+        PhotonNetwork.Destroy(controller);
         cameraFollow.players.Remove(controller.transform);
         //CreateController();
     }
