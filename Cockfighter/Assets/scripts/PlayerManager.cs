@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 using System.IO;
+using TMPro;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -39,5 +40,4 @@ public class PlayerManager : MonoBehaviour
         cameraFollow.players.Remove(controller.transform);
         //CreateController();
     }
-
 }

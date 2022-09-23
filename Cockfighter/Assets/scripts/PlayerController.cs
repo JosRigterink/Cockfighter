@@ -11,6 +11,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
     [SerializeField] Image healthbarImage;
     [SerializeField] GameObject ui;
+    public GameObject gameOverUi;
 
     [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
 

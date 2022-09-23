@@ -12,6 +12,7 @@ TagManager:
   - FollowCamera
   - LookTag
   - RagDoll
+  - GameOverTag
   layers:
   - Default
   - TransparentFX
