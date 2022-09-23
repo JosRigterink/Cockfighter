@@ -11,7 +11,6 @@ public class StartMenu : MonoBehaviour
     public GameObject[] skinMenuPages;
     public GameObject coins;
     public GameObject stageSelectButton;
-    public TextMeshProUGUI usernameDisplay;
     public Slider fullscreenSlider;
     public bool isHost;
     public bool isFullscreen;
@@ -103,7 +102,6 @@ public class StartMenu : MonoBehaviour
     public void FindRoomButton()
     {
         Debug.Log("Find Room Button Pressed");
-        //roomButtonText.text = "quit room";
     }
     public void ControlsSettingsButton()
     {
