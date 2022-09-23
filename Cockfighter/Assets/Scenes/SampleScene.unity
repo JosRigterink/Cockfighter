@@ -15205,10 +15205,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.7490196, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 0.7490196, b: 0, a: 1}
-    m_DisabledColor: {r: 1, g: 0.7490196, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0.5, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_SelectedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_DisabledColor: {r: 1, g: 0, b: 0.5019608, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
   m_SpriteState:
@@ -17937,10 +17937,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.7490196, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 0.7490196, b: 0, a: 1}
-    m_DisabledColor: {r: 1, g: 0.7490196, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0.5, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_SelectedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_DisabledColor: {r: 1, g: 0, b: 0.5019608, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
   m_SpriteState:
@@ -22633,10 +22633,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 0, b: 0.5, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_SelectedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_DisabledColor: {r: 1, g: 0, b: 0.5019608, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
   m_SpriteState:
@@ -31971,10 +31971,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.7490196, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 0.7490196, b: 0, a: 1}
-    m_DisabledColor: {r: 1, g: 0.7490196, b: 0, a: 1}
+    m_HighlightedColor: {r: 1, g: 0, b: 0.5, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_SelectedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_DisabledColor: {r: 1, g: 0, b: 0.5019608, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
   m_SpriteState:
@@ -46221,8 +46221,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: hard boiled
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2f1fe7959dd54dc4588dca0a264f0e06, type: 2}
-  m_sharedMaterial: {fileID: -1904959475646660609, guid: 2f1fe7959dd54dc4588dca0a264f0e06,
+  m_fontAsset: {fileID: 11400000, guid: dfea6408f0f406b439bcc52880ec1121, type: 2}
+  m_sharedMaterial: {fileID: -759124798169590328, guid: dfea6408f0f406b439bcc52880ec1121,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -47324,10 +47324,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 0, b: 0.5, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_SelectedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_DisabledColor: {r: 1, g: 0, b: 0.5019608, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
   m_SpriteState:
@@ -53843,10 +53843,10 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_PressedColor: {r: 1, g: 0.75, b: 0, a: 1}
-    m_SelectedColor: {r: 1, g: 1, b: 1, a: 1}
-    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.5019608}
+    m_HighlightedColor: {r: 1, g: 0, b: 0.5, a: 1}
+    m_PressedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_SelectedColor: {r: 1, g: 0, b: 0.5019608, a: 1}
+    m_DisabledColor: {r: 1, g: 0, b: 0.5019608, a: 1}
     m_ColorMultiplier: 1
     m_FadeDuration: 0
   m_SpriteState:
@@ -54141,8 +54141,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: hard boiled
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 2f1fe7959dd54dc4588dca0a264f0e06, type: 2}
-  m_sharedMaterial: {fileID: -1904959475646660609, guid: 2f1fe7959dd54dc4588dca0a264f0e06,
+  m_fontAsset: {fileID: 11400000, guid: dfea6408f0f406b439bcc52880ec1121, type: 2}
+  m_sharedMaterial: {fileID: -759124798169590328, guid: dfea6408f0f406b439bcc52880ec1121,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
