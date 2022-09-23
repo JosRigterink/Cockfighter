@@ -17,14 +17,14 @@ public class SpawnManager : MonoBehaviour
 
     public Transform GetSpawnPoint()
     {
-        return spawnPoints[Random.Range(0, spawnPoints.Length)].transform;
-        //if (PhotonNetwork.IsMasterClient)
-        //{
-         //    return spawnPoints[0].transform;
-        //}
-        //else
-        //{
-         //    return spawnPoints[1].transform;
-       // }
+        //return spawnPoints[Random.Range(0, spawnPoints.Length)].transform;
+        if (PhotonNetwork.IsMasterClient)
+        {
+             return spawnPoints[0].transform;
+        }
+        else
+        {
+             return spawnPoints[1].transform;
+        }
     }
 }

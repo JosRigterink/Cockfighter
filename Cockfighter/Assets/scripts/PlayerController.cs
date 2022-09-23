@@ -64,6 +64,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         {
             //Destroy(GetComponentInChildren<LookAtScript>().gameObject);
             Destroy(rb);
+            Destroy(ui);
         }
     }
 
@@ -126,10 +127,10 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     [PunRPC]
     void RPC_TakeDamage(float damage)
     {
-        //if (!PV.IsMine)
-        //{
-          //  return;
-        //}
+        if (!PV.IsMine)
+        {
+            return;
+        }
         currentHealth -= damage;
 
         healthbarImage.fillAmount = currentHealth / maxHealth;
