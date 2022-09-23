@@ -158,8 +158,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
                 child.gameObject.SetActive(false);
             }
 
-            GameObject copy = PhotonNetwork.Instantiate(ragdoll.name, transform.position - new Vector3(0, 1, 0), transform.rotation);
-            copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 50, ragdoll.transform.localPosition.z - 50));
+            GameObject copy = PhotonNetwork.Instantiate(ragdoll.name, transform.localPosition + new Vector3(0, -1, 0), transform.localRotation);
+            copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
 
             GetComponent<PhotonTransformView>().enabled = false;
 
@@ -167,6 +167,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             attackScript.enabled = false;
 
             playerManager.Die();
-        } 
+        }
+        else if (!PV.IsMine)
+        {
+            walkSpeed = 0;
+            rb.freezeRotation = true;
+            attackScript.enabled = false;
+        }
     }
 }
