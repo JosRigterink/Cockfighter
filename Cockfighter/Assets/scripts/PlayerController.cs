@@ -11,7 +11,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
     [SerializeField] Image healthbarImage;
     [SerializeField] GameObject ui;
-    public GameObject gameOverUi;
 
     [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
 
@@ -163,10 +162,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
 
             GetComponent<PhotonTransformView>().enabled = false;
-
             walkSpeed = 0;
             attackScript.enabled = false;
-
+         
             playerManager.Die();
         }
         else if (!PV.IsMine)

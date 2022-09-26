@@ -38,6 +38,7 @@ public class PlayerManager : MonoBehaviour
     {
         PhotonNetwork.Destroy(controller);
         cameraFollow.players.Remove(controller.transform);
+        GameObject.Find("GameEndCanvas").transform.GetComponent<GameOverScript>().gameHasEnded = true;
         //CreateController();
     }
 }

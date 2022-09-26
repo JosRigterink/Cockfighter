@@ -236,8 +236,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
+  m_Sprite: {fileID: 10911, guid: 0000000000000000f000000000000000, type: 0}
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -413,8 +413,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbarImage: {fileID: 2080801304005768840}
   ui: {fileID: 3765731381364431704}
-  gameOverUi: {fileID: 8634852494123134631, guid: 047a859e2ebc93a42ab631bb42859a03,
-    type: 3}
   sprintSpeed: 6
   walkSpeed: 3
   smoothTime: 0.15
