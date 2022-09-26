@@ -16,8 +16,9 @@ public class GameOverScript : MonoBehaviour
 
     void Update()
     {
-        if (gameHasEnded == true)
+        if(gameHasEnded ==true)
         {
+            Cursor.lockState = CursorLockMode.None;
             Invoke("EndScreen", 3f);
         }
     }
@@ -28,10 +29,10 @@ public class GameOverScript : MonoBehaviour
     }
 
 
-
     [PunRPC]
     void RPC_EnableWinscreen()
     {
+        Cursor.lockState = CursorLockMode.None;
         if (!pv.IsMine)
         {
             gameObject.GetComponent<Canvas>().enabled = true;
