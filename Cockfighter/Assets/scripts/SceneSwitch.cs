@@ -19,7 +19,8 @@ public class SceneSwitch : MonoBehaviour
 
     public void Sceneswitching()
     {
-        PhotonNetwork.LoadLevel(0);
         PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LoadLevel(0);
+        
     }
 }
