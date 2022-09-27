@@ -8,6 +8,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+<<<<<<< HEAD
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
@@ -17,4 +18,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Wessel/Scenes/Main Menu.unity
     guid: cde864831801c224aa1c38c45ced9bee
+=======
+  - enabled: 1
+    path: Assets/Scenes/GameScene 1.unity
+    guid: b19ec6b4493788446b5198708f64d2eb
+>>>>>>> parent of 86d7e3e (Merge branch 'Wessel')
   m_configObjects: {}
