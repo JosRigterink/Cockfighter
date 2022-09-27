@@ -25,7 +25,7 @@ public class StartMenu : MonoBehaviour
     }
     public void Update()
     {
-        if (canvasses[0].activeSelf == true || canvasses[6].activeSelf == true || canvasses[8].activeSelf == true || canvasses[9].activeSelf == true || canvasses[10].activeSelf == true || canvasses[11].activeSelf == true || canvasses[12].activeSelf == true)
+        if (canvasses[0].activeSelf == true || canvasses[5].activeSelf == true || canvasses[6].activeSelf == true || canvasses[8].activeSelf == true || canvasses[9].activeSelf == true || canvasses[10].activeSelf == true || canvasses[11].activeSelf == true || canvasses[12].activeSelf == true)
         {
             coins.SetActive(false);
         }
