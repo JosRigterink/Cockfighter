@@ -41,7 +41,7 @@ public class StartMenu : MonoBehaviour
                 DeactivateAllCanvasses();
                 canvasses[1].SetActive(true);
             }
-            if (canvasses[5].activeSelf == true || canvasses[6].activeSelf == true)
+            if (canvasses[6].activeSelf == true)
             {
                 DeactivateAllCanvasses();
                 canvasses[4].SetActive(true);
