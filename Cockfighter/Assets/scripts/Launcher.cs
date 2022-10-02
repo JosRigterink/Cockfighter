@@ -6,9 +6,20 @@ using TMPro;
 using Photon.Realtime;
 using System.Linq;
 
+[System.Serializable]
+
+public class MapData
+{
+    public string name;
+    public int scene;
+}
+
 public class Launcher : MonoBehaviourPunCallbacks
 {
     public static Launcher Instance;
+
+    public MapData[] maps;
+    public int currentmap = 0;
 
     [SerializeField] TMP_InputField roomNameInputField;
     [SerializeField] TMP_Text errorText;
@@ -18,6 +29,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] Transform playerListContent;
     [SerializeField] GameObject playerListItemPrefab;
     [SerializeField] GameObject startGameButton;
+    [SerializeField] GameObject selectMapButton;
 
     void Awake()
     {
@@ -72,11 +84,13 @@ public class Launcher : MonoBehaviourPunCallbacks
         }
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+        selectMapButton.SetActive(PhotonNetwork.IsMasterClient);
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
+        selectMapButton.SetActive(PhotonNetwork.IsMasterClient);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -87,7 +101,8 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     public void StartGame()
     {
-        PhotonNetwork.LoadLevel(1);
+        //PhotonNetwork.LoadLevel(1);
+        PhotonNetwork.LoadLevel(maps[currentmap].scene);
     }
     public void leaveRoom()
     {
@@ -122,5 +137,11 @@ public class Launcher : MonoBehaviourPunCallbacks
     public override void OnPlayerEnteredRoom(Player newPlayer)
     {
         Instantiate(playerListItemPrefab, playerListContent).GetComponent<PlayerListIten>().SetUp(newPlayer);
+    }
+
+    public void ChangeMap(int currentmapp)
+    {
+        currentmap = currentmapp;
+        if (currentmap >= maps.Length) currentmap = 0;
     }
 }

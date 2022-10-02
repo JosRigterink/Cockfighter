@@ -15611,6 +15611,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217042}
+        m_TargetAssemblyTypeName: Launcher, Assembly-CSharp
+        m_MethodName: ChangeMap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &447784854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19445,6 +19457,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf9cb6578b08c1846af1844ba79e7055, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maps:
+  - name: Rodeo
+    scene: 1
+  - name: BoxRing
+    scene: 2
+  - name: Circus
+    scene: 3
+  currentmap: 0
   roomNameInputField: {fileID: 1124509244}
   errorText: {fileID: 1662012026}
   roomNameText: {fileID: 204818998}
@@ -19455,6 +19475,7 @@ MonoBehaviour:
   playerListItemPrefab: {fileID: 5074196298675778262, guid: 41f71feb42027f74babce7445c9ba56e,
     type: 3}
   startGameButton: {fileID: 1176996203}
+  selectMapButton: {fileID: 1234075653}
 --- !u!114 &584217043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32033,6 +32054,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217042}
+        m_TargetAssemblyTypeName: Launcher, Assembly-CSharp
+        m_MethodName: ChangeMap
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &937571309
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40360,7 +40393,7 @@ GameObject:
   - component: {fileID: 1234075656}
   - component: {fileID: 1234075655}
   m_Layer: 5
-  m_Name: Image
+  m_Name: SelectStageButtonImage
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
