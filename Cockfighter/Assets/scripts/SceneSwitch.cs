@@ -25,6 +25,6 @@ public class SceneSwitch : MonoBehaviour
         }
         PhotonNetwork.LeaveRoom();
         PhotonNetwork.LoadLevel(0);
-        PhotonNetwork.DestroyAll();
+        //PhotonNetwork.DestroyAll();
     }
 }
