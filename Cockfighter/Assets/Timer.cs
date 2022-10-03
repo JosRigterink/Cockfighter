@@ -7,7 +7,7 @@ using TMPro;
 public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
-    float startingTime = 120f;
+    public float startingTime = 120f;
 
     [SerializeField] TMP_Text countdownText;
     [SerializeField] GameObject drawCanvas;
@@ -31,6 +31,7 @@ public class Timer : MonoBehaviour
         if (currentTime <= 0)
         {
             drawCanvas.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
             currentTime = 0;
         }
 
