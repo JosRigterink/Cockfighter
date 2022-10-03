@@ -884,6 +884,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   players: []
   offset: {x: 0, y: 4, z: -7}
+  minZoom: 90
+  maxZoom: 50
+  zoomLimiter: 50
   velocity: {x: 0, y: 0, z: 0}
   smoothTime: 0.5
 --- !u!114 &75233401
