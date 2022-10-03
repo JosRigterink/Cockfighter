@@ -19,8 +19,12 @@ public class SceneSwitch : MonoBehaviour
 
     public void Sceneswitching()
     {
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.DestroyAll();
+        }
         PhotonNetwork.LeaveRoom();
         PhotonNetwork.LoadLevel(0);
-        
+        //PhotonNetwork.DestroyAll();
     }
 }
