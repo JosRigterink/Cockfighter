@@ -32,6 +32,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject selectMapButton;
 
     [SerializeField] int playerMoney;
+    [SerializeField] TMP_Text moneyText;
 
     void Awake()
     {
@@ -42,6 +43,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     void Start()
     {
         playerMoney = PlayerPrefs.GetInt("PlayerMoney");
+        moneyText.text = playerMoney.ToString();
         Debug.Log("Connecting to Master");
         PhotonNetwork.ConnectUsingSettings();
     }

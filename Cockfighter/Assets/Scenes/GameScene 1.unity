@@ -52676,6 +52676,11 @@ PrefabInstance:
       propertyPath: startingTime
       value: 120
       objectReference: {fileID: 0}
+    - target: {fileID: 608336989748546319, guid: 399920441c8ec3a44995fcc978219617,
+        type: 3}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 399920441c8ec3a44995fcc978219617, type: 3}
 --- !u!1001 &1559482332311493185

@@ -14619,6 +14619,8 @@ MonoBehaviour:
     type: 3}
   startGameButton: {fileID: 1176996203}
   selectMapButton: {fileID: 1234075653}
+  playerMoney: 0
+  moneyText: {fileID: 2102037528}
 --- !u!114 &584217043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -64438,7 +64440,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102037525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bd3eb4ad02d96a4d82f86d7e182d46b, type: 3}
   m_Name: 
@@ -64465,7 +64467,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2000
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7fb2d56e3a25cf5479d18c2129e02888, type: 2}
   m_sharedMaterial: {fileID: 953069776107223331, guid: 7fb2d56e3a25cf5479d18c2129e02888,
