@@ -141,7 +141,12 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         //}
         currentHealth -= damage;
 
-        healthbarImage.fillAmount = currentHealth / maxHealth;
+        if (PV.IsMine)
+        {
+            healthbarImage.fillAmount = currentHealth / maxHealth;
+        }
+
+        //healthbarImage.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0)
         {

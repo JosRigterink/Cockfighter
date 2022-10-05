@@ -31,6 +31,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject startGameButton;
     [SerializeField] GameObject selectMapButton;
 
+    [SerializeField] int playerMoney;
+
     void Awake()
     {
         Instance = this;
@@ -39,6 +41,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        playerMoney = PlayerPrefs.GetInt("PlayerMoney");
         Debug.Log("Connecting to Master");
         PhotonNetwork.ConnectUsingSettings();
     }
