@@ -3,24 +3,23 @@ using System.Collections.Generic;
 using UnityEngine;
 using Photon.Pun;
 
-public class SceneSwitch : MonoBehaviour
+public class ChangeMatInGame : MonoBehaviour
 {
+    public Material chickenMat;
+    public Material glovesMat;
+    PhotonView PV;
     // Start is called before the first frame update
     void Start()
     {
-
+        PV = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (PV.IsMine)
+        {
 
-    }
-
-    public void Sceneswitching()
-    {
-        PhotonNetwork.Disconnect();
-        PhotonNetwork.LoadLevel(0);
-        //PhotonNetwork.DestroyAll();
+        }
     }
 }
