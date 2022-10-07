@@ -14575,12 +14575,12 @@ GameObject:
   - component: {fileID: 428903235}
   - component: {fileID: 428903236}
   m_Layer: 5
-  m_Name: GameObject (1)
+  m_Name: KO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &428903235
 RectTransform:
   m_ObjectHideFlags: 0
@@ -51163,7 +51163,7 @@ GameObject:
   - component: {fileID: 1334127747}
   - component: {fileID: 1334127748}
   m_Layer: 5
-  m_Name: GameObject (3)
+  m_Name: Timeout
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55646,12 +55646,12 @@ GameObject:
   - component: {fileID: 1462485409}
   - component: {fileID: 1462485410}
   m_Layer: 5
-  m_Name: GameObject (6)
+  m_Name: Countdown
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1462485409
 RectTransform:
   m_ObjectHideFlags: 0
