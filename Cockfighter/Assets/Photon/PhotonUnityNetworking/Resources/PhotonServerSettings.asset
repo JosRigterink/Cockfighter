@@ -42,6 +42,9 @@ MonoBehaviour:
   - RPC_TakeDamage
   - RPC_Shoot
   - RPC_EnableWinscreen
+  - RPC_RenderMat
+  - RPC_RPC_MaterialSync
+  - RPC_ChangeMat
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

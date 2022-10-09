@@ -56,6 +56,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         player = GameObject.Find("PlayerController(Clone)");
 
         animator.applyRootMotion = true;
+        //GetComponentInChildren<SkinnedMeshRenderer>().material = Launcher.Instance.materialInst;
 
         if (PV.IsMine)
         {

@@ -17,9 +17,7 @@ public class ChangeMatInGame : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (PV.IsMine)
-        {
-
-        }
+        //chickenMat.color = GetComponentInChildren<SkinnedMeshRenderer>().material.color;
+        
     }
 }

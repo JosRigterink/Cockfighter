@@ -7,10 +7,11 @@ public class ChangeMaterial : MonoBehaviour
 {
     public Material chickenMat;
     public Material glovesShirtMat;
+    PhotonView pv;
 
     void Start()
     {
-
+        pv = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -20,11 +21,18 @@ public class ChangeMaterial : MonoBehaviour
         {
             ChangeMat();
         }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            GetComponentInChildren<SkinnedMeshRenderer>().material.color = Color.cyan;
+            chickenMat.color = GetComponentInChildren<SkinnedMeshRenderer>().material.color;
+        }
     }
 
     public void ChangeMat()
     {
-        chickenMat.color = Color.black;
-        GetComponentInChildren<SkinnedMeshRenderer>().material.color = Color.black;
+       //chickenMat.color = Color.red;
+       GetComponentInChildren<SkinnedMeshRenderer>().material.color = Color.red;
+       chickenMat.color =  GetComponentInChildren<SkinnedMeshRenderer>().material.color;
+       
     }
 }

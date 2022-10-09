@@ -32,13 +32,12 @@ public class PlayerManager : MonoBehaviour
         controller = PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "PlayerController"), spawnpoint.position, spawnpoint.rotation, 0, new object[] { pv.ViewID });
         cameraFollow = GameObject.FindGameObjectWithTag("FollowCamera").GetComponent<MultipleTarget>();
         cameraFollow.players.Add(controller.transform);
-        controller.GetComponentInChildren<SkinnedMeshRenderer>().material = GameObject.Find("materialChanger").GetComponent<ChangeMatInGame>().chickenMat;
     }
 
     public void Die()
     {
-        PhotonNetwork.Destroy(controller);
         cameraFollow.players.Remove(controller.transform);
+        PhotonNetwork.Destroy(controller);
         GameObject.Find("GameEndCanvas").transform.GetComponent<GameOverScript>().gameHasEnded = true;
         //CreateController();
     }
