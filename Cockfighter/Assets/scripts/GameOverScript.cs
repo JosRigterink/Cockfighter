@@ -43,7 +43,12 @@ public class GameOverScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         gameObject.GetComponent<Canvas>().enabled = true;
         MoneyEarned();
-        PhotonNetwork.DestroyAll();
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().walkSpeed = 0;
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().sprintSpeed = 0;
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().rb.freezeRotation = true;
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().attackScript.enabled = false;
+        GameObject.Find("PlayerController(Clone)").GetComponentInChildren<Animator>().enabled = false;
+        //Invoke("DestroyAll", 2f);
     }
 
     void MoneyEarned()
@@ -53,5 +58,9 @@ public class GameOverScript : MonoBehaviour
         //Debug.Log(money)
         playerMoney += 250;
         PlayerPrefs.SetInt("PlayerMoney", playerMoney);
+    }
+    void DestroyAll()
+    {
+        PhotonNetwork.DestroyAll();
     }
 }

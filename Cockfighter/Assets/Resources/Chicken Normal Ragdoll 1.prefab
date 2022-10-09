@@ -1280,6 +1280,7 @@ GameObject:
   - component: {fileID: 5057462251537893121}
   - component: {fileID: 4685617326851727835}
   - component: {fileID: 5233136167339844415}
+  - component: {fileID: -4244961750173187664}
   m_Layer: 0
   m_Name: Chicken Normal Ragdoll 1
   m_TagString: Untagged
@@ -1342,6 +1343,20 @@ MonoBehaviour:
   m_SynchronizeRotation: 1
   m_SynchronizeScale: 0
   m_UseLocal: 1
+--- !u!114 &-4244961750173187664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5576696260803255739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6191e1db338f2504eaa59944a4b052b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
+  materialName: 
 --- !u!1 &5913056254043392737
 GameObject:
   m_ObjectHideFlags: 0

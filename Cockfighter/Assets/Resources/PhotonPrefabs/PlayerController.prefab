@@ -446,7 +446,6 @@ MonoBehaviour:
   attackScript: {fileID: 2861020171659601702}
   animator: {fileID: 7953553229771761229}
   cameraFollowScript: {fileID: 0}
-  lookAtPoint: {fileID: 0}
   currentHealth: 100
   player: {fileID: 0}
   ragdoll: {fileID: 5576696260803255739, guid: ce7f014bc3103e34e9a2e2430a9ccef9, type: 3}

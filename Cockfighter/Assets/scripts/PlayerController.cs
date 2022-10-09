@@ -28,7 +28,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     PhotonView PV;
     public MultipleTarget cameraFollowScript;
-    public GameObject lookAtPoint;
 
     const float maxHealth = 100f;
     public float currentHealth = maxHealth;
@@ -37,7 +36,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public GameObject player;
     public GameObject ragdoll;
 
-
+   
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -56,7 +55,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         player = GameObject.Find("PlayerController(Clone)");
 
         animator.applyRootMotion = true;
-        //GetComponentInChildren<SkinnedMeshRenderer>().material = Launcher.Instance.materialInst;
 
         if (PV.IsMine)
         {
@@ -165,15 +163,15 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             }
 
             GameObject copy = PhotonNetwork.Instantiate(ragdoll.name, transform.localPosition + new Vector3(0, -1, 0), transform.localRotation);
-            copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
-
+            //copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
+            
             GetComponent<PhotonTransformView>().enabled = false;
             walkSpeed = 0;
             attackScript.enabled = false;
          
             playerManager.Die();
         }
-        else if (!PV.IsMine)
+        else
         {
             walkSpeed = 0;
             rb.freezeRotation = true;
