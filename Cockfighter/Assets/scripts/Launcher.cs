@@ -122,6 +122,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     }
     public override void OnLeftRoom()
     {
+        //Destroy(RoomManager.Instance.gameObject);
+        //PhotonNetwork.LeaveRoom();
         MenuManager.Instance.OpenMenu("title");
     }
 
