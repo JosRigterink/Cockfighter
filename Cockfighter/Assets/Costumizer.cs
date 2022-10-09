@@ -7,8 +7,7 @@ using PhotonHashTable = ExitGames.Client.Photon.Hashtable;
 
 public class Costumizer : MonoBehaviour
 {
-    public Material chickenMat;
-    public Material glovesShirtMat;
+    public GameObject chickenDummie;
 
     private PhotonHashTable hash = new PhotonHashTable();
 
@@ -21,8 +20,6 @@ public class Costumizer : MonoBehaviour
     public string currentMaterialName;
     
 
-
-    // Start is called before the first frame update
     void Start()
     {
         materials = colorMaterials;
@@ -36,26 +33,11 @@ public class Costumizer : MonoBehaviour
     void Update()
     {
         SetColor(matIndex);
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            ChangeMat();
-        }
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-           // GameObject.Find("Chicken Normal").GetComponentInChildren<SkinnedMeshRenderer>().material.color = Color.cyan;
-            //chickenMat.color = GameObject.Find("Chicken Normal").GetComponentInChildren<SkinnedMeshRenderer>().material.color;
-        }
-    }
-
-    public void ChangeMat()
-    {
-        //chickenMat.color = Color.red;
-        //GameObject.Find("Chicken Normal").GetComponentInChildren<SkinnedMeshRenderer>().material.color = Color.red;
-        //chickenMat.color = GameObject.Find("Chicken Normal").GetComponentInChildren<SkinnedMeshRenderer>().material.color;
     }
 
     public void SetColor(int index)
     {
+        chickenDummie.GetComponentInChildren<SkinnedMeshRenderer>().material = materials[index];
         matIndex = index;
         currentMaterialName = materialNames[index];
         if (PhotonNetwork.IsConnected)

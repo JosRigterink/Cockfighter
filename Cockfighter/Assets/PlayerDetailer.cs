@@ -9,7 +9,6 @@ public class PlayerDetailer : MonoBehaviourPunCallbacks
 
     public string materialName;
 
-    // Start is called before the first frame update
     void Start()
     {
         materials = Costumizer.materials;
@@ -22,11 +21,5 @@ public class PlayerDetailer : MonoBehaviourPunCallbacks
                 break;
             }
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

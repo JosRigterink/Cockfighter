@@ -4139,6 +4139,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &165841641
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6685,6 +6697,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -11893,6 +11917,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &453545039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14745,12 +14781,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c127cf52fcda5b489b7ec10cc4df76e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chickenMat: {fileID: 2100000, guid: e6cbb43f7e48c3a48a01aa88faad41cb, type: 2}
-  glovesShirtMat: {fileID: 2100000, guid: c958f5f95ea2b3646a48ef7a2929b079, type: 2}
+  chickenDummie: {fileID: 629625600}
   colorMaterials:
-  - {fileID: 2100000, guid: e6cbb43f7e48c3a48a01aa88faad41cb, type: 2}
-  - {fileID: 2100000, guid: b2ec540203f7b8549a1b436cd50c2f6f, type: 2}
-  - {fileID: 2100000, guid: 9d3e008bccacda1458d45d39cc788d04, type: 2}
+  - {fileID: 2100000, guid: a340222df33031547934c9ae777a0c01, type: 2}
+  - {fileID: 2100000, guid: fa852e5e4a2284c4680f7fc61166b48d, type: 2}
+  - {fileID: 2100000, guid: 9dfddb3daf511944c825c1c9241d37a9, type: 2}
+  - {fileID: 2100000, guid: e9d6cb06f96b60641abcf51e78b9803f, type: 2}
+  - {fileID: 2100000, guid: f2120a9b5124614499082b9272adc807, type: 2}
+  - {fileID: 2100000, guid: 7d62dba8beb1381448bcd63ecdb1c1fc, type: 2}
+  - {fileID: 2100000, guid: c4f8e935ff80a914d867d7808999f6fd, type: 2}
   matIndex: 0
   currentMaterialName: 
 --- !u!1 &587679953
@@ -15636,6 +15675,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 626377682}
   m_CullTransparentMesh: 1
+--- !u!1 &629625600 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5867116050152472911, guid: 4d46924232b21304db326b2b502c59c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1325997111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &635343704
 GameObject:
   m_ObjectHideFlags: 0
@@ -20356,6 +20401,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &844532265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20874,6 +20931,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -28687,6 +28756,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
@@ -38905,6 +38986,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
