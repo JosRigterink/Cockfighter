@@ -11,13 +11,13 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/GameScene 1.unity
     guid: b19ec6b4493788446b5198708f64d2eb
   - enabled: 0
     path: Assets/Wessel/Scenes/Main Menu.unity
     guid: cde864831801c224aa1c38c45ced9bee
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Stefan progaming.unity
     guid: 1e5ce9d19c4cfb041917a977bffc3c5d
   m_configObjects: {}
