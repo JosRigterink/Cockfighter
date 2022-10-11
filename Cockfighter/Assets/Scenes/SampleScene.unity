@@ -14790,8 +14790,13 @@ MonoBehaviour:
   - {fileID: 2100000, guid: f2120a9b5124614499082b9272adc807, type: 2}
   - {fileID: 2100000, guid: 7d62dba8beb1381448bcd63ecdb1c1fc, type: 2}
   - {fileID: 2100000, guid: c4f8e935ff80a914d867d7808999f6fd, type: 2}
+  colorMaterials2:
+  - {fileID: 2100000, guid: b2ec540203f7b8549a1b436cd50c2f6f, type: 2}
+  - {fileID: 2100000, guid: 9d3e008bccacda1458d45d39cc788d04, type: 2}
   matIndex: 0
+  matIndex2: 0
   currentMaterialName: 
+  currentMaterialName2: 
 --- !u!1 &587679953
 GameObject:
   m_ObjectHideFlags: 0

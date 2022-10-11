@@ -1356,7 +1356,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   materials: []
+  materials2: []
   materialName: 
+  materialName2: 
+  mats2: []
 --- !u!1 &5913056254043392737
 GameObject:
   m_ObjectHideFlags: 0
