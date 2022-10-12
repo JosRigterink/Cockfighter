@@ -344,6 +344,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Confetti
       objectReference: {fileID: 0}
+    - target: {fileID: 4319547928493012884, guid: 5f3722c251306be4fb260b1fe75381be,
+        type: 3}
+      propertyPath: InitialModule.startRotation.scalar
+      value: -3.1415925
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319547928493012884, guid: 5f3722c251306be4fb260b1fe75381be,
+        type: 3}
+      propertyPath: InitialModule.startRotation.minScalar
+      value: 3.1415925
+      objectReference: {fileID: 0}
     - target: {fileID: 4319547928493012887, guid: 5f3722c251306be4fb260b1fe75381be,
         type: 3}
       propertyPath: m_RootOrder
