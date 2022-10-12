@@ -359,6 +359,26 @@ PrefabInstance:
       propertyPath: InitialModule.startRotation.minScalar
       value: 3.1415925
       objectReference: {fileID: 0}
+    - target: {fileID: 4319547928493012884, guid: 5f3722c251306be4fb260b1fe75381be,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key2.g
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319547928493012884, guid: 5f3722c251306be4fb260b1fe75381be,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key6.r
+      value: 0.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319547928493012884, guid: 5f3722c251306be4fb260b1fe75381be,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key7.b
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319547928493012884, guid: 5f3722c251306be4fb260b1fe75381be,
+        type: 3}
+      propertyPath: InitialModule.startColor.maxGradient.key7.g
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4319547928493012887, guid: 5f3722c251306be4fb260b1fe75381be,
         type: 3}
       propertyPath: m_RootOrder
