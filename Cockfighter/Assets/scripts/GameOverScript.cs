@@ -11,9 +11,11 @@ public class GameOverScript : MonoBehaviour
     [SerializeField] GameObject gameOverCanvas;
     [SerializeField] GameObject gameTimer;
     PhotonView pv;
+    public int playerMoney;
     void Awake()
     {
         pv = GetComponent<PhotonView>();
+        playerMoney = PlayerPrefs.GetInt("PlayerMoney");
     }
 
     void Update()
@@ -40,8 +42,25 @@ public class GameOverScript : MonoBehaviour
         gameTimer.GetComponent<Timer>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         gameObject.GetComponent<Canvas>().enabled = true;
+        MoneyEarned();
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().walkSpeed = 0;
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().sprintSpeed = 0;
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().rb.freezeRotation = true;
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().attackScript.enabled = false;
+        GameObject.Find("PlayerController(Clone)").GetComponentInChildren<Animator>().enabled = false;
+        //Invoke("DestroyAll", 2f);
+    }
+
+    void MoneyEarned()
+    {
         //int money = Random.Range(200, 500);
-        int money = 250;
-        Debug.Log(money);
+        // int money = 250;
+        //Debug.Log(money)
+        playerMoney += 250;
+        PlayerPrefs.SetInt("PlayerMoney", playerMoney);
+    }
+    void DestroyAll()
+    {
+        PhotonNetwork.DestroyAll();
     }
 }

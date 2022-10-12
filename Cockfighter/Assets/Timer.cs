@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using Photon.Pun;
 
 public class Timer : MonoBehaviour
 {
@@ -33,6 +34,7 @@ public class Timer : MonoBehaviour
             drawCanvas.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
             currentTime = 0;
+            PhotonNetwork.DestroyAll();
         }
 
         DisplayTime(currentTime);

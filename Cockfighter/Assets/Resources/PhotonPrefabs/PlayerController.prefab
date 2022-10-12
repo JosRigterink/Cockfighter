@@ -1,5 +1,27 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &2268438112638851055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 34124160473914941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa584fbee541324448dd18d8409c7a41, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ObservedComponentsFoldoutOpen: 1
+  Group: 0
+  prefixField: -1
+  Synchronization: 3
+  OwnershipTransfer: 0
+  observableSearch: 2
+  ObservedComponents: []
+  sceneViewId: 0
+  InstantiationId: 0
+  isRuntimeInstantiated: 0
 --- !u!1 &374752750623783584
 GameObject:
   m_ObjectHideFlags: 0
@@ -264,6 +286,7 @@ GameObject:
   - component: {fileID: 4735908783202263543}
   - component: {fileID: 7913463029799548108}
   - component: {fileID: 2861020171659601702}
+  - component: {fileID: 6715145042395183463}
   m_Layer: 0
   m_Name: PlayerController
   m_TagString: Player
@@ -423,7 +446,6 @@ MonoBehaviour:
   attackScript: {fileID: 2861020171659601702}
   animator: {fileID: 7953553229771761229}
   cameraFollowScript: {fileID: 0}
-  lookAtPoint: {fileID: 0}
   currentHealth: 100
   player: {fileID: 0}
   ragdoll: {fileID: 5576696260803255739, guid: ce7f014bc3103e34e9a2e2430a9ccef9, type: 3}
@@ -487,6 +509,23 @@ MonoBehaviour:
   rightAttackCooldown: 0
   leftAttackCooldown: 0
   blockCooldown: 0
+--- !u!114 &6715145042395183463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1441538788396509550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6191e1db338f2504eaa59944a4b052b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  materials: []
+  materials2: []
+  materialName: 
+  materialName2: 
+  mats2: []
 --- !u!1 &2117394307884062591
 GameObject:
   m_ObjectHideFlags: 0
@@ -1461,7 +1500,7 @@ GameObject:
   - component: {fileID: 8156442412112108189}
   - component: {fileID: 3256500216480658900}
   m_Layer: 0
-  m_Name: Canvas
+  m_Name: PlayerNameCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2035,6 +2074,12 @@ Transform:
 --- !u!95 &7953553229771761229 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 5867116050152472904, guid: 4d46924232b21304db326b2b502c59c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 4543178144191883013}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &34124160473914941 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4572745498606074168, guid: 4d46924232b21304db326b2b502c59c7,
     type: 3}
   m_PrefabInstance: {fileID: 4543178144191883013}
   m_PrefabAsset: {fileID: 0}
