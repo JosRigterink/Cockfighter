@@ -9,7 +9,7 @@ using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
-    [SerializeField] Image healthbarImage;
+    [SerializeField] public Image healthbarImage;
     [SerializeField] GameObject ui;
 
     [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     PhotonView PV;
     public MultipleTarget cameraFollowScript;
 
-    const float maxHealth = 100f;
+    public const float maxHealth = 100f;
     public float currentHealth = maxHealth;
 
     PlayerManager playerManager;
@@ -176,6 +176,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             walkSpeed = 0;
             rb.freezeRotation = true;
             attackScript.enabled = false;
+        }
+    }
+
+     public void HPbarUpdate()
+    {
+        if (PV.IsMine)
+        {
+            healthbarImage.fillAmount = currentHealth / maxHealth;
         }
     }
 }
