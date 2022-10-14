@@ -55,6 +55,73 @@ public class StartMenu : MonoBehaviour
         {
             Screen.fullScreen = true;
         }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            if (canvasses[1].activeSelf == true)
+            {
+                canvasses[1].SetActive(false);
+                canvasses[2].SetActive(true);
+                return;
+            }
+            if (canvasses[2].activeSelf == true)
+            {
+                canvasses[2].SetActive(false);
+                canvasses[3].SetActive(true);
+                return;
+            }
+            if (canvasses[3].activeSelf == true)
+            {
+                canvasses[3].SetActive(false);
+                canvasses[4].SetActive(true);
+                return;
+            }
+            if (canvasses[4].activeSelf == true)
+            {
+                canvasses[4].SetActive(false);
+                canvasses[13].SetActive(true);
+                return;
+            }
+            if (canvasses[13].activeSelf == true)
+            {
+                canvasses[13].SetActive(false);
+                canvasses[1].SetActive(true);
+                return;
+            }
+        }
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            if (canvasses[1].activeSelf == true)
+            {
+                canvasses[1].SetActive(false);
+                canvasses[13].SetActive(true);
+                return;
+            }
+            if (canvasses[2].activeSelf == true)
+            {
+                canvasses[2].SetActive(false);
+                canvasses[1].SetActive(true);
+                return;
+            }
+            if (canvasses[3].activeSelf == true)
+            {
+                canvasses[3].SetActive(false);
+                canvasses[2].SetActive(true);
+                return;
+            }
+            if (canvasses[4].activeSelf == true)
+            {
+                canvasses[4].SetActive(false);
+                canvasses[3].SetActive(true);
+                return;
+            }
+            if (canvasses[13].activeSelf == true)
+            {
+                canvasses[13].SetActive(false);
+                canvasses[4].SetActive(true);
+                return;
+            }
+        }
     }
     void DeactivateAllCanvasses()
     {
