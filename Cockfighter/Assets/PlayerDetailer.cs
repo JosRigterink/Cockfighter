@@ -37,6 +37,7 @@ public class PlayerDetailer : MonoBehaviourPunCallbacks
             {
                 mats2[2] = material2;
                 gameObject.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats2;
+                gameObject.GetComponentInChildren<MeshRenderer>().material.color = mats2[2].color;
                 break;
             }
         }

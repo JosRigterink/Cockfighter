@@ -76,6 +76,9 @@ public class Costumizer : MonoBehaviour
         chickenDummie.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats;
         chickenDummieMenu.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats;
 
+        chickenDummie.GetComponentInChildren<MeshRenderer>().material.color = mats[2].color;
+        chickenDummieMenu.GetComponentInChildren<MeshRenderer>().material.color = mats[2].color;
+
         matIndex2 = index2;
         currentMaterialName2 = materialNames2[index2];
         if (PhotonNetwork.IsConnected)
@@ -94,5 +97,10 @@ public class Costumizer : MonoBehaviour
     {
         hash2["material2"] = currentMaterialName2;
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash2);
+    }
+
+    void Rotation()
+    {
+        chickenDummieMenu.GetComponent<MouseRotate>().enabled = true;
     }
 }

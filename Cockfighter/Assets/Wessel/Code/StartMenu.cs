@@ -36,6 +36,7 @@ public class StartMenu : MonoBehaviour
 
         if (Input.anyKey)
         {
+            Invoke("Rotation", 1f);
             if (canvasses[0].activeSelf == true)
             {
                 DeactivateAllCanvasses();
@@ -226,5 +227,10 @@ public class StartMenu : MonoBehaviour
     {
         DeactivateAllSkinMenuPages();
         skinMenuPages[4].SetActive(true);
+    }
+
+    public void Rotation()
+    {
+        canvasses[1].GetComponentInChildren<MouseRotate>().enabled = true;
     }
 }
