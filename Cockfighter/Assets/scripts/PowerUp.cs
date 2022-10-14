@@ -25,6 +25,7 @@ public class PowerUp : MonoBehaviour
         if (other.gameObject.tag == "Player" && hpPowerup == true)
         {
             other.gameObject.GetComponent<PlayerController>().currentHealth = 100f;
+            other.gameObject.GetComponent<PlayerController>().HPbarUpdate();
             Destroy(gameObject);
         }
         if (other.gameObject.tag == "Player" && doubleDmgPowerup == true)

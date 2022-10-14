@@ -8,6 +8,7 @@ using PhotonHashTable = ExitGames.Client.Photon.Hashtable;
 public class Costumizer : MonoBehaviour
 {
     public GameObject chickenDummie;
+    public GameObject chickenDummieMenu;
 
     private PhotonHashTable hash = new PhotonHashTable();
     private PhotonHashTable hash2 = new PhotonHashTable();
@@ -73,6 +74,7 @@ public class Costumizer : MonoBehaviour
         mats[2] = materials2[index2];
         //chickenDummie.GetComponentInChildren<SkinnedMeshRenderer>().materials[2] = mats[2];
         chickenDummie.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats;
+        chickenDummieMenu.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats;
 
         matIndex2 = index2;
         currentMaterialName2 = materialNames2[index2];

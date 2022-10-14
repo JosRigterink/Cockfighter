@@ -2510,6 +2510,12 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
   m_EffectDistance: {x: 5, y: -5}
   m_UseGraphicAlpha: 1
+--- !u!1 &81755337 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5867116050152472911, guid: 4d46924232b21304db326b2b502c59c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1401919529}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &89786118
 GameObject:
   m_ObjectHideFlags: 0
@@ -6002,6 +6008,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -11174,6 +11192,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &271117819
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15480,6 +15510,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &405653712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17374,6 +17416,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -22959,6 +23013,7 @@ GameObject:
   - component: {fileID: 584217042}
   - component: {fileID: 584217047}
   - component: {fileID: 584217048}
+  - component: {fileID: 584217049}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -22997,6 +23052,8 @@ MonoBehaviour:
     type: 3}
   startGameButton: {fileID: 1176996203}
   selectMapButton: {fileID: 1234075653}
+  playerMoney: 0
+  moneyText: {fileID: 2102037528}
 --- !u!114 &584217043
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23108,6 +23165,46 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   usernameInput: {fileID: 1674664054}
+--- !u!114 &584217049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 584217041}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c127cf52fcda5b489b7ec10cc4df76e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  chickenDummie: {fileID: 599838539}
+  chickenDummieMenu: {fileID: 81755337}
+  colorMaterials:
+  - {fileID: 2100000, guid: a340222df33031547934c9ae777a0c01, type: 2}
+  - {fileID: 2100000, guid: fa852e5e4a2284c4680f7fc61166b48d, type: 2}
+  - {fileID: 2100000, guid: 9dfddb3daf511944c825c1c9241d37a9, type: 2}
+  - {fileID: 2100000, guid: e9d6cb06f96b60641abcf51e78b9803f, type: 2}
+  - {fileID: 2100000, guid: f2120a9b5124614499082b9272adc807, type: 2}
+  - {fileID: 2100000, guid: 7d62dba8beb1381448bcd63ecdb1c1fc, type: 2}
+  - {fileID: 2100000, guid: c4f8e935ff80a914d867d7808999f6fd, type: 2}
+  colorMaterials2:
+  - {fileID: 2100000, guid: 51a13f06ff70bc84c8de89f238bcc3e5, type: 2}
+  - {fileID: 2100000, guid: 297f07279f61f034da5fc2b3c8cc78c3, type: 2}
+  - {fileID: 2100000, guid: f75f2e0b92ecc9140b8c782bc8fbe441, type: 2}
+  - {fileID: 2100000, guid: 637888480e901af4d8a35d4eb85a007d, type: 2}
+  - {fileID: 2100000, guid: 4ab213f74a7d7ed429ba6a42c9a8673b, type: 2}
+  - {fileID: 2100000, guid: 09e3fb048ae5ae34d894f0c27c29e541, type: 2}
+  - {fileID: 2100000, guid: 339a32ba457af094b80cdbc3f45cd1dd, type: 2}
+  - {fileID: 2100000, guid: 4291385b75db2bd4594eb86bf974f5a5, type: 2}
+  - {fileID: 2100000, guid: 7230c79b9d5c39b4aad7e9b93155f85f, type: 2}
+  - {fileID: 2100000, guid: ae850a4ba54b3a443a6c6ecc8d753b2f, type: 2}
+  - {fileID: 2100000, guid: 3a4281b29cfa26047a8a40521029a4a9, type: 2}
+  - {fileID: 2100000, guid: 369c7d8b9fa1bd04b813361fd76a9f7c, type: 2}
+  - {fileID: 2100000, guid: bd4e4eaa4d3de7e429a816aee7fbb7b8, type: 2}
+  matIndex: 0
+  matIndex2: 0
+  currentMaterialName: 
+  currentMaterialName2: 
 --- !u!1 &587679953
 GameObject:
   m_ObjectHideFlags: 0
@@ -23653,6 +23750,12 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &599838539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5867116050152472911, guid: 4d46924232b21304db326b2b502c59c7,
+    type: 3}
+  m_PrefabInstance: {fileID: 1325997111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &602512845
 GameObject:
   m_ObjectHideFlags: 0
@@ -33021,6 +33124,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &844532265
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33810,6 +33925,18 @@ MonoBehaviour:
         m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
         m_MethodName: set_interactable
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -43665,6 +43792,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &974340804
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49810,6 +49949,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 10
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1124054060
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50800,6 +50951,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -53612,6 +53775,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1219878062
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54322,6 +54497,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -56187,6 +56374,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &1264022645
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -57371,6 +57570,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -62734,7 +62945,7 @@ PrefabInstance:
     - target: {fileID: 6496440653292280821, guid: 4d46924232b21304db326b2b502c59c7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6496440653292280821, guid: 4d46924232b21304db326b2b502c59c7,
         type: 3}
@@ -67950,6 +68161,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -77608,6 +77831,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -92944,6 +93179,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2042546001
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -93530,6 +93777,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
@@ -94958,6 +95217,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 9
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &2100651533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95056,7 +95327,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2102037525}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2bd3eb4ad02d96a4d82f86d7e182d46b, type: 3}
   m_Name: 
@@ -95083,7 +95354,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 2000
+  m_text: '0
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7fb2d56e3a25cf5479d18c2129e02888, type: 2}
   m_sharedMaterial: {fileID: 953069776107223331, guid: 7fb2d56e3a25cf5479d18c2129e02888,
@@ -96199,6 +96472,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 12
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2114304086
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97150,6 +97435,18 @@ MonoBehaviour:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 584217049}
+        m_TargetAssemblyTypeName: Costumizer, Assembly-CSharp
+        m_MethodName: SetColor2
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 11
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 1
