@@ -15,6 +15,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
 
     [SerializeField] public GameObject chicken;
+    public GameOverScript gameover;
 
     float verticalLookRotation;
     public Vector3 smoothMoveVelocity;
@@ -74,6 +75,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             if (currentHealth <= 0)
             {
                 cameraFollowScript.enabled = false;
+                this.enabled = false;
             }
 
             if (cameraFollowScript.players.Contains(transform) && cameraFollowScript.players.Contains(player.transform))
@@ -155,6 +157,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         if (currentHealth <= 0)
         {
             Die();
+            this.enabled = false;
+            cameraFollowScript.enabled = false;
         }
     }
 

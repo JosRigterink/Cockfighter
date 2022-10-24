@@ -26,6 +26,7 @@ public class GameOverScript : MonoBehaviour
         if(gameHasEnded == true)
         {
             uiElements[1].SetActive(true);
+            GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().enabled = false;
             Invoke("EndScreen", 3f);
         }
         gameHasEnded = false;
@@ -33,6 +34,7 @@ public class GameOverScript : MonoBehaviour
     
     void EndScreen()
     {
+        followcam.enabled = false;
         gameOverCanvas.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         gameTimer.GetComponent<Timer>().enabled = false;
@@ -53,7 +55,7 @@ public class GameOverScript : MonoBehaviour
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().rb.freezeRotation = true;
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().attackScript.enabled = false;
         GameObject.Find("PlayerController(Clone)").GetComponentInChildren<Animator>().enabled = false;
-        //followcam.enabled = false;
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().enabled = false;
         //Invoke("DestroyAll", 2f);
     }
 

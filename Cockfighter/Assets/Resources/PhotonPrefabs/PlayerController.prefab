@@ -356,6 +356,7 @@ MonoBehaviour:
   walkSpeed: 3
   smoothTime: 0.15
   chicken: {fileID: 7953553229771761226}
+  gameover: {fileID: 0}
   smoothMoveVelocity: {x: 0, y: 0, z: 0}
   moveAmount: {x: 0, y: 0, z: 0}
   rb: {fileID: 0}
