@@ -7,11 +7,6 @@ public class MouseRotate : MonoBehaviour
     Vector3 mPrevPos = Vector3.zero;
     Vector3 mPosDelta = Vector3.zero;
 
-    void Start()
-    {
-      
-    }
-
     void Update()
     {
         if (Input.GetMouseButton(0))
@@ -22,5 +17,4 @@ public class MouseRotate : MonoBehaviour
 
         mPrevPos = Input.mousePosition;
     }
-
 }

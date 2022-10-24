@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
 
     [SerializeField] TMP_Text countdownText;
     [SerializeField] GameObject drawCanvas;
+    [SerializeField] GameObject timeOutCanvas;
+    [SerializeField] GameObject cameraFollow;
     // Start is called before the first frame update
     void Start()
     {
@@ -31,10 +33,11 @@ public class Timer : MonoBehaviour
 
         if (currentTime <= 0)
         {
-            drawCanvas.SetActive(true);
+            cameraFollow.GetComponent<MultipleTarget>().enabled = false;
+            timeOutCanvas.SetActive(true);
+            Invoke("DrawCanvas", 1f);
             Cursor.lockState = CursorLockMode.None;
             currentTime = 0;
-            PhotonNetwork.DestroyAll();
         }
 
         DisplayTime(currentTime);
@@ -50,5 +53,11 @@ public class Timer : MonoBehaviour
         float seconds = Mathf.FloorToInt(timeToDisplay % 60);
 
         countdownText.text = string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+
+    void DrawCanvas()
+    {
+        drawCanvas.SetActive(true);
+        PhotonNetwork.DestroyAll();
     }
 }

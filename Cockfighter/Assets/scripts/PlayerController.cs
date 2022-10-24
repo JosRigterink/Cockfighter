@@ -71,6 +71,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     {
         if (!PV.IsMine)
         {
+            if (currentHealth <= 0)
+            {
+                cameraFollowScript.enabled = false;
+            }
+
             if (cameraFollowScript.players.Contains(transform) && cameraFollowScript.players.Contains(player.transform))
             {
                 if (chicken.activeSelf)
@@ -161,7 +166,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             {
                 child.gameObject.SetActive(false);
             }
-
             GameObject copy = PhotonNetwork.Instantiate(ragdoll.name, transform.localPosition + new Vector3(0, -1, 0), transform.localRotation);
             //copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
             

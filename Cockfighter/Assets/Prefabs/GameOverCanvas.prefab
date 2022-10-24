@@ -249,8 +249,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0ac737a19c8658748ae965f655bcdb02, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasWon: 0
   gameHasEnded: 0
-  player: {fileID: 0}
+  gameOverCanvas: {fileID: 0}
+  gameTimer: {fileID: 0}
+  uiElements: []
+  playerMoney: 0
 --- !u!114 &1559482332973072969
 MonoBehaviour:
   m_ObjectHideFlags: 0
