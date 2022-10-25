@@ -25,7 +25,6 @@ public class SingleShotGun : Gun
         if(Physics.Raycast(ray,out RaycastHit hit,((GunInfo)itemInfo).range))
         {
             hit.collider.gameObject.GetComponent<IDamageable>()?.TakeDamage(((GunInfo)itemInfo).damage);
-          
         }
     }
 

@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Photon.Pun;
+using System.IO;
 
 public class PowerUpSpawn : MonoBehaviour
 {
@@ -21,12 +23,12 @@ public class PowerUpSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (PhotonNetwork.IsMasterClient && Input.GetKeyDown(KeyCode.Alpha1))
         {
             int randomIndex = Random.Range(0, powerUps.Length);
-            Vector3 randomSpawnpoint = new Vector3(Random.Range(-8.8f, 8.8f), 1, Random.Range(-8.8f, 8.8f));
+            Vector3 randomSpawnpoint = new Vector3(Random.Range(-7.8f, 7.8f), 1, Random.Range(-7.8f, 7.8f));
 
-            Instantiate(powerUps[randomIndex], randomSpawnpoint, Quaternion.identity);
+            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "HpPowerUp 1"), randomSpawnpoint, Quaternion.identity);
 
             Debug.Log(powerUps[randomIndex]);
         }

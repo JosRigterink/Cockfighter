@@ -352,8 +352,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthbarImage: {fileID: 2080801304005768840}
   ui: {fileID: 3765731381364431704}
-  sprintSpeed: 6
-  walkSpeed: 3
+  sprintSpeed: 0
+  walkSpeed: 0
   smoothTime: 0.15
   chicken: {fileID: 7953553229771761226}
   gameover: {fileID: 0}
@@ -366,6 +366,7 @@ MonoBehaviour:
   currentHealth: 100
   player: {fileID: 0}
   ragdoll: {fileID: 5576696260803255739, guid: ce7f014bc3103e34e9a2e2430a9ccef9, type: 3}
+  timer: 5
 --- !u!114 &4735908783202263543
 MonoBehaviour:
   m_ObjectHideFlags: 0

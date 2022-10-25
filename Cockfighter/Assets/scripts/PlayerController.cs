@@ -74,7 +74,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         timer -= Time.deltaTime;
         if (timer <= 0)
         {
-
+            walkSpeed = 3f;
+            sprintSpeed = 6f;
         }
         if (!PV.IsMine)
         {

@@ -11,7 +11,7 @@ public class PowerUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        pv = GetComponent<PhotonView>();
     }
 
     // Update is called once per frame
@@ -20,17 +20,23 @@ public class PowerUp : MonoBehaviour
         
     }
 
-    private void OnTriggerEnter(Collider other)
+    void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player" && hpPowerup == true)
         {
-            other.gameObject.GetComponent<PlayerController>().currentHealth = 100f;
-            other.gameObject.GetComponent<PlayerController>().HPbarUpdate();
-            Destroy(gameObject);
+            powerup(other);
         }
+
         if (other.gameObject.tag == "Player" && doubleDmgPowerup == true)
         {
             //do double dmg stuff;
         }
+    }
+
+    public void powerup(Collider other)
+    {
+        other.gameObject.GetComponent<PlayerController>().currentHealth = 100f;
+        other.gameObject.GetComponent<PlayerController>().HPbarUpdate();
+        Destroy(gameObject);
     }
 }
