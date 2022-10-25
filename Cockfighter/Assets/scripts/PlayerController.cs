@@ -201,4 +201,18 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             healthbarImage.fillAmount = currentHealth / maxHealth;
         }
     }
+    public void Healing()
+    {
+        PV.RPC("RPC_Heal", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void RPC_Heal()
+    {
+        currentHealth = 100f;
+        if (PV.IsMine)
+        {
+            healthbarImage.fillAmount = currentHealth / maxHealth;
+        }
+    }
 }

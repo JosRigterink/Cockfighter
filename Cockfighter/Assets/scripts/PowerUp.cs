@@ -24,19 +24,14 @@ public class PowerUp : MonoBehaviour
     {
         if (other.gameObject.tag == "Player" && hpPowerup == true)
         {
-            powerup(other);
+            other.gameObject.GetComponent<PlayerController>().Healing();
+            //other.gameObject.GetComponent<PlayerController>().HPbarUpdate();
+            Destroy(gameObject);
         }
 
         if (other.gameObject.tag == "Player" && doubleDmgPowerup == true)
         {
             //do double dmg stuff;
         }
-    }
-
-    public void powerup(Collider other)
-    {
-        other.gameObject.GetComponent<PlayerController>().currentHealth = 100f;
-        other.gameObject.GetComponent<PlayerController>().HPbarUpdate();
-        Destroy(gameObject);
     }
 }
