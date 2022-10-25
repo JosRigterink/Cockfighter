@@ -8,7 +8,7 @@ using Photon.Pun;
 public class Timer : MonoBehaviour
 {
     float currentTime = 0f;
-    public float startingTime = 120f;
+    public float startingTime = 124f;
 
     [SerializeField] TMP_Text countdownText;
     [SerializeField] GameObject drawCanvas;

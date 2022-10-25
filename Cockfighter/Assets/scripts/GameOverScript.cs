@@ -54,7 +54,7 @@ public class GameOverScript : MonoBehaviour
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().sprintSpeed = 0;
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().rb.freezeRotation = true;
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().attackScript.enabled = false;
-        GameObject.Find("PlayerController(Clone)").GetComponentInChildren<Animator>().enabled = false;
+        //GameObject.Find("PlayerController(Clone)").GetComponentInChildren<Animator>().enabled = false;
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().enabled = false;
         //Invoke("DestroyAll", 2f);
     }

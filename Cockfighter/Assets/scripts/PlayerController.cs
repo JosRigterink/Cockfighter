@@ -36,6 +36,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     PlayerManager playerManager;
     public GameObject player;
     public GameObject ragdoll;
+    public float timer;
 
    
     void Awake()
@@ -70,6 +71,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     void Update()
     {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+
+        }
         if (!PV.IsMine)
         {
             if (currentHealth <= 0)
