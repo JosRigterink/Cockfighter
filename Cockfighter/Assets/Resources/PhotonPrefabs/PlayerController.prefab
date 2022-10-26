@@ -427,6 +427,7 @@ MonoBehaviour:
   rightAttackCooldown: 0
   leftAttackCooldown: 0
   blockCooldown: 0
+  knockbackForce: 5
 --- !u!114 &6715145042395183463
 MonoBehaviour:
   m_ObjectHideFlags: 0

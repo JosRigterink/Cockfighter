@@ -20,6 +20,8 @@ public class AttackScript : MonoBehaviour
     public float rightAttackCooldown;
     public float leftAttackCooldown;
     public float blockCooldown;
+
+    public float knockbackForce = 300f;
     //public float damage;
     // Start is called before the first frame update
 
@@ -158,7 +160,7 @@ public class AttackScript : MonoBehaviour
                     break;
                 case "Body":
                     c.transform.root.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
-                    c.transform.root.gameObject.GetComponent<PlayerController>().rb.AddForce(transform.forward);
+                    //c.transform.root.gameObject.GetComponent<PlayerController>().rb.AddForce(transform.forward * knockbackForce, ForceMode.Impulse);
                     break;
                 default:
                     Debug.Log("Couldnt find any colliders");

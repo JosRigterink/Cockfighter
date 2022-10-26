@@ -157,6 +157,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         if (PV.IsMine)
         {
             healthbarImage.fillAmount = currentHealth / maxHealth;
+            rb.AddForce(-transform.forward * 2f, ForceMode.Impulse);
         }
 
         //healthbarImage.fillAmount = currentHealth / maxHealth;
