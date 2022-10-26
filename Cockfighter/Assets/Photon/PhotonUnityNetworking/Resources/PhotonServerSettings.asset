@@ -47,6 +47,7 @@ MonoBehaviour:
   - RPC_ChangeMat
   - HealPu
   - RPC_Heal
+  - RPC_DestroyForAll
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

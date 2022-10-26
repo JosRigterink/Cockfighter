@@ -26,12 +26,17 @@ public class PowerUp : MonoBehaviour
         {
             other.gameObject.GetComponent<PlayerController>().Healing();
             //other.gameObject.GetComponent<PlayerController>().HPbarUpdate();
-            Destroy(gameObject);
+            pv.RPC("RPC_DestroyForAll", RpcTarget.All);
         }
 
         if (other.gameObject.tag == "Player" && doubleDmgPowerup == true)
         {
             //do double dmg stuff;
         }
+    }
+    [PunRPC]
+    public void RPC_DestroyForAll()
+    {
+        Destroy(gameObject);
     }
 }
