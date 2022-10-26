@@ -25,22 +25,25 @@ public class PowerUpSpawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        powerUpSpawnTime -= Time.deltaTime;
-
-        if (PhotonNetwork.IsMasterClient && powerUpSpawnTime <= 0f)
+        if (Launcher.Instance.powerUps == true)
         {
-            canSpawn = true;
-            powerUpSpawnTime = timeBetweenPowerups;
-        }
-        if (canSpawn == true)
-        {
-            int randomIndex = Random.Range(0, powerUps.Length);
-            Vector3 randomSpawnpoint = new Vector3(Random.Range(-7.8f, 7.8f), 1, Random.Range(-7.8f, 7.8f));
+            powerUpSpawnTime -= Time.deltaTime;
 
-            PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "HpPowerUp 1"), randomSpawnpoint, Quaternion.identity);
+            if (PhotonNetwork.IsMasterClient && powerUpSpawnTime <= 0f)
+            {
+                canSpawn = true;
+                powerUpSpawnTime = timeBetweenPowerups;
+            }
+            if (canSpawn == true)
+            {
+                int randomIndex = Random.Range(0, powerUps.Length);
+                Vector3 randomSpawnpoint = new Vector3(Random.Range(-7.8f, 7.8f), 1, Random.Range(-7.8f, 7.8f));
 
-            Debug.Log(powerUps[randomIndex]);
-            canSpawn = false;
+                PhotonNetwork.Instantiate(Path.Combine("PhotonPrefabs", "HpPowerUp 1"), randomSpawnpoint, Quaternion.identity);
+
+                Debug.Log(powerUps[randomIndex]);
+                canSpawn = false;
+            }
         }
     }
 }

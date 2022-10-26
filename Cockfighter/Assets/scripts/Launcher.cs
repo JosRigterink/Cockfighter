@@ -33,6 +33,7 @@ public class Launcher : MonoBehaviourPunCallbacks
 
     [SerializeField] int playerMoney;
     [SerializeField] TMP_Text moneyText;
+    public bool powerUps;
 
     void Awake()
     {
