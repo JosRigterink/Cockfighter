@@ -58,6 +58,9 @@ public class Timer : MonoBehaviour
     void DrawCanvas()
     {
         drawCanvas.SetActive(true);
-        PhotonNetwork.DestroyAll();
+        if (PhotonNetwork.IsMasterClient)
+        {
+            PhotonNetwork.DestroyAll();
+        }
     }
 }
