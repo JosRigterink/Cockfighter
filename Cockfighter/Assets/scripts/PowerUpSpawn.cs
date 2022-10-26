@@ -13,12 +13,6 @@ public class PowerUpSpawn : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        //int randomIndex = Random.Range(0, powerUps.Length);
-        //Vector3 randomSpawnpoint = new Vector3(Random.Range(-10, 11), 1, Random.Range(-10, 10));
-
-        // Instantiate(powerUps[randomIndex], randomSpawnpoint, Quaternion.identity);
-
-        // Debug.Log(powerUps[randomIndex]);
         powerUpSpawnTime = timeBetweenPowerups;
     }
 

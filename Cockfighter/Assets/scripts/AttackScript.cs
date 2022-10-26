@@ -158,6 +158,7 @@ public class AttackScript : MonoBehaviour
                     break;
                 case "Body":
                     c.transform.root.gameObject.GetComponent<PlayerController>().TakeDamage(damage);
+                    c.transform.root.gameObject.GetComponent<PlayerController>().rb.AddForce(transform.forward);
                     break;
                 default:
                     Debug.Log("Couldnt find any colliders");
