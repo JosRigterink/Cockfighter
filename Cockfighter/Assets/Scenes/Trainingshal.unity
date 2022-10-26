@@ -8101,6 +8101,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Chicken Normal
       objectReference: {fileID: 0}
+    - target: {fileID: 5867116050152472911, guid: 4d46924232b21304db326b2b502c59c7,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6496440653292280821, guid: 4d46924232b21304db326b2b502c59c7,
         type: 3}
       propertyPath: m_RootOrder
