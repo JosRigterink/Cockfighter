@@ -292,7 +292,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: e9132173a4f47ec478bd60d198a85b87, type: 2}
+      objectReference: {fileID: 2100000, guid: 08bc19148a7a7cc4f9d4c3599c1d618a, type: 2}
     - target: {fileID: 4466382708408155779, guid: 5ab403c9e2bb70542b34c8dd61dd1ee5,
         type: 3}
       propertyPath: m_RootOrder
@@ -594,7 +594,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1771302176}
   m_LocalRotation: {x: -0.7069386, y: -0, z: -0, w: 0.707275}
-  m_LocalPosition: {x: 0.014, y: -0.16, z: 0.358}
+  m_LocalPosition: {x: 0.014, y: 0.59000146, z: -0.14199778}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 955043758}
@@ -2053,14 +2053,14 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
       serializedVersion: 2
-      minMaxState: 1
-      scalar: 0.9999
+      minMaxState: 0
+      scalar: 0
       minScalar: 0.9999
       maxCurve:
         serializedVersion: 2
@@ -2112,8 +2112,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startFrame:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 0.9999
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -2172,7 +2172,11 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: 21300000, guid: 692c082762fd4504b93f9885ebdaa29f, type: 3}
+    - sprite: {fileID: 21300000, guid: 195c938b96e45ac41a418c80ab19defd, type: 3}
+    - sprite: {fileID: 21300000, guid: 20ce1ca6d4f5bb94db0ee4bca1b373da, type: 3}
+    - sprite: {fileID: 21300000, guid: bd3e5724b4379704c9b893f186bbd360, type: 3}
+    - sprite: {fileID: 21300000, guid: a86ed7c5460e3d64d88d2fdec6b9a9d6, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
