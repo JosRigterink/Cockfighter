@@ -369,6 +369,7 @@ MonoBehaviour:
   player: {fileID: 0}
   ragdoll: {fileID: 5576696260803255739, guid: ce7f014bc3103e34e9a2e2430a9ccef9, type: 3}
   timer: 5
+  knockbackForce: 2
 --- !u!114 &4735908783202263543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +430,6 @@ MonoBehaviour:
   rightAttackCooldown: 0
   leftAttackCooldown: 0
   blockCooldown: 0
-  knockbackForce: 5
 --- !u!114 &6715145042395183463
 MonoBehaviour:
   m_ObjectHideFlags: 0

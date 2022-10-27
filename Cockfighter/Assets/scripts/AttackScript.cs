@@ -21,7 +21,6 @@ public class AttackScript : MonoBehaviour
     public float leftAttackCooldown;
     public float blockCooldown;
 
-    public float knockbackForce = 300f;
     //public float damage;
     // Start is called before the first frame update
 

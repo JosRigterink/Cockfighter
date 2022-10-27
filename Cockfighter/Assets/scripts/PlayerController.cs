@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public GameObject player;
     public GameObject ragdoll;
     public float timer;
+    public float knockbackForce;
 
    
     void Awake()
@@ -157,7 +158,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         if (PV.IsMine)
         {
             healthbarImage.fillAmount = currentHealth / maxHealth;
-            rb.AddForce(-transform.forward * 2f, ForceMode.Impulse);
+            rb.AddForce(-transform.forward * knockbackForce, ForceMode.Impulse);
         }
 
         //healthbarImage.fillAmount = currentHealth / maxHealth;
