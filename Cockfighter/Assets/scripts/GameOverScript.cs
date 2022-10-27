@@ -39,6 +39,7 @@ public class GameOverScript : MonoBehaviour
         Cursor.lockState = CursorLockMode.None;
         gameTimer.GetComponent<Timer>().enabled = false;
         pv.RPC("RPC_EnableWinscreen", RpcTarget.Others);
+        Invoke("BackToMenu", 7f);
     }
 
 
@@ -56,6 +57,7 @@ public class GameOverScript : MonoBehaviour
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().attackScript.enabled = false;
         //GameObject.Find("PlayerController(Clone)").GetComponentInChildren<Animator>().enabled = false;
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().enabled = false;
+        Invoke("BackToMenu", 7f);
         //Invoke("DestroyAll", 2f);
     }
 
@@ -64,11 +66,18 @@ public class GameOverScript : MonoBehaviour
         //int money = Random.Range(200, 500);
         // int money = 250;
         //Debug.Log(money)
-        playerMoney += 250;
+        playerMoney += 100;
         PlayerPrefs.SetInt("PlayerMoney", playerMoney);
     }
     void DestroyAll()
     {
         PhotonNetwork.DestroyAll();
     }
+
+    void BackToMenu()
+    {
+        gameObject.GetComponent<SceneSwitch>().enabled = true;
+    }
+
+
 }

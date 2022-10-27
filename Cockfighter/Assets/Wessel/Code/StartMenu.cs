@@ -36,7 +36,7 @@ public class StartMenu : MonoBehaviour
 
         if (Input.anyKey)
         {
-            Invoke("Rotation", 1f);
+            Invoke("Rotation", 1.5f);
             if (canvasses[0].activeSelf == true)
             {
                 DeactivateAllCanvasses();

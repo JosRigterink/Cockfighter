@@ -9,7 +9,8 @@ using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
-    [SerializeField] public Image healthbarImage;
+    //[SerializeField] public Image healthbarImage;
+    public Slider healthbarSlider;
     [SerializeField] GameObject ui;
 
     [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
@@ -157,7 +158,9 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
         if (PV.IsMine)
         {
-            healthbarImage.fillAmount = currentHealth / maxHealth;
+            healthbarSlider.value = currentHealth;
+            
+            //healthbarImage.fillAmount = currentHealth / maxHealth;
             rb.AddForce(-transform.forward * knockbackForce, ForceMode.Impulse);
         }
 
@@ -200,7 +203,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     {
         if (PV.IsMine)
         {
-            healthbarImage.fillAmount = currentHealth / maxHealth;
+            //healthbarImage.fillAmount = currentHealth / maxHealth;
+            healthbarSlider.value = currentHealth;
         }
     }
     public void Healing()
@@ -214,7 +218,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         currentHealth = 100f;
         if (PV.IsMine)
         {
-            healthbarImage.fillAmount = currentHealth / maxHealth;
+            //healthbarImage.fillAmount = currentHealth / maxHealth;
+            healthbarSlider.value = currentHealth;
         }
     }
 }
