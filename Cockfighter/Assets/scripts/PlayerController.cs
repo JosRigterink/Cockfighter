@@ -9,12 +9,14 @@ using UnityEngine.Animations;
 
 public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
-    [SerializeField] Image healthbarImage;
+    //[SerializeField] public Image healthbarImage;
+    public Slider healthbarSlider;
     [SerializeField] GameObject ui;
 
     [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
 
     [SerializeField] public GameObject chicken;
+    public GameOverScript gameover;
 
     float verticalLookRotation;
     public Vector3 smoothMoveVelocity;
@@ -28,16 +30,17 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     PhotonView PV;
     public MultipleTarget cameraFollowScript;
-    public GameObject lookAtPoint;
 
-    const float maxHealth = 100f;
+    public const float maxHealth = 100f;
     public float currentHealth = maxHealth;
 
     PlayerManager playerManager;
     public GameObject player;
     public GameObject ragdoll;
+    public float timer;
+    public float knockbackForce;
 
-
+   
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -70,8 +73,20 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 
     void Update()
     {
+        timer -= Time.deltaTime;
+        if (timer <= 0)
+        {
+            walkSpeed = 3f;
+            sprintSpeed = 6f;
+        }
         if (!PV.IsMine)
         {
+            if (currentHealth <= 0)
+            {
+                cameraFollowScript.enabled = false;
+                this.enabled = false;
+            }
+
             if (cameraFollowScript.players.Contains(transform) && cameraFollowScript.players.Contains(player.transform))
             {
                 if (chicken.activeSelf)
@@ -141,11 +156,21 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         //}
         currentHealth -= damage;
 
-        healthbarImage.fillAmount = currentHealth / maxHealth;
+        if (PV.IsMine)
+        {
+            healthbarSlider.value = currentHealth;
+            
+            //healthbarImage.fillAmount = currentHealth / maxHealth;
+            rb.AddForce(-transform.forward * knockbackForce, ForceMode.Impulse);
+        }
+
+        //healthbarImage.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0)
         {
             Die();
+            this.enabled = false;
+            cameraFollowScript.enabled = false;
         }
     }
 
@@ -157,21 +182,44 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             {
                 child.gameObject.SetActive(false);
             }
-
             GameObject copy = PhotonNetwork.Instantiate(ragdoll.name, transform.localPosition + new Vector3(0, -1, 0), transform.localRotation);
-            copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
-
+            //copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
+            
             GetComponent<PhotonTransformView>().enabled = false;
             walkSpeed = 0;
             attackScript.enabled = false;
          
             playerManager.Die();
         }
-        else if (!PV.IsMine)
+        else
         {
             walkSpeed = 0;
             rb.freezeRotation = true;
             attackScript.enabled = false;
+        }
+    }
+
+     public void HPbarUpdate()
+    {
+        if (PV.IsMine)
+        {
+            //healthbarImage.fillAmount = currentHealth / maxHealth;
+            healthbarSlider.value = currentHealth;
+        }
+    }
+    public void Healing()
+    {
+        PV.RPC("RPC_Heal", RpcTarget.All);
+    }
+
+    [PunRPC]
+    public void RPC_Heal()
+    {
+        currentHealth = 100f;
+        if (PV.IsMine)
+        {
+            //healthbarImage.fillAmount = currentHealth / maxHealth;
+            healthbarSlider.value = currentHealth;
         }
     }
 }

@@ -31,6 +31,10 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject startGameButton;
     [SerializeField] GameObject selectMapButton;
 
+    [SerializeField] int playerMoney;
+    [SerializeField] TMP_Text moneyText;
+    public bool powerUps;
+
     void Awake()
     {
         Instance = this;
@@ -39,6 +43,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     // Start is called before the first frame update
     void Start()
     {
+        playerMoney = PlayerPrefs.GetInt("PlayerMoney");
+        moneyText.text = playerMoney.ToString();
         Debug.Log("Connecting to Master");
         PhotonNetwork.ConnectUsingSettings();
     }
@@ -117,6 +123,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     }
     public override void OnLeftRoom()
     {
+        //Destroy(RoomManager.Instance.gameObject);
+        //PhotonNetwork.LeaveRoom();
         MenuManager.Instance.OpenMenu("title");
     }
 

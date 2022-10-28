@@ -60,13 +60,13 @@ public class MultipleTarget : MonoBehaviour
         {
             return players[0].position;
         }
-
+    
         var bounds = new Bounds(players[0].position, Vector3.zero);
+
         for (int i = 0; i < players.Count; i++)
         {
             bounds.Encapsulate(players[i].position);
         }
-
         return bounds.center;
     }
 }
