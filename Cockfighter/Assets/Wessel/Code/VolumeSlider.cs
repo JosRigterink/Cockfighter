@@ -8,9 +8,10 @@ using TMPro;
 public class VolumeSlider : MonoBehaviour
 {
     public AudioMixer mainMixer;
+    public Slider slider;
 
     public void SetMainVolume(float volume)
     {
-        mainMixer.SetFloat("Master Volume", Mathf.Log10(volume) * 20);
+        mainMixer.SetFloat("Master Volume", (slider.value - 75));
     }
 }
