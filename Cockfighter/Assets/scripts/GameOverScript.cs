@@ -25,7 +25,7 @@ public class GameOverScript : MonoBehaviour
     {
         if(gameHasEnded == true)
         {
-            uiElements[1].SetActive(true);
+            //uiElements[1].SetActive(true);
             GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().enabled = false;
             Invoke("EndScreen", 3f);
         }
@@ -38,6 +38,7 @@ public class GameOverScript : MonoBehaviour
         gameOverCanvas.SetActive(true);
         Cursor.lockState = CursorLockMode.None;
         gameTimer.GetComponent<Timer>().enabled = false;
+        pv.RPC("KOmessage", RpcTarget.All);
         pv.RPC("RPC_EnableWinscreen", RpcTarget.Others);
         Invoke("BackToMenu", 7f);
     }
@@ -46,6 +47,7 @@ public class GameOverScript : MonoBehaviour
     [PunRPC]
     void RPC_EnableWinscreen()
     {
+        //uiElements[1].SetActive(true);
         gameTimer.GetComponent<Timer>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         uiElements[0].SetActive(true);
@@ -77,6 +79,11 @@ public class GameOverScript : MonoBehaviour
     void BackToMenu()
     {
         gameObject.GetComponent<SceneSwitch>().enabled = true;
+    }
+    [PunRPC]
+    void KOmessage()
+    {
+        uiElements[1].SetActive(true);
     }
 
 
