@@ -44,6 +44,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public ParticleSystem hitfx;
     public ParticleSystem dash;
 
+    public TraumaInducer shakeManager;
 
     void Awake()
     {
@@ -172,6 +173,11 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         Destroy(hitfxCopy, 3f);
         GameObject bloodfxCopy = Instantiate(blood.gameObject, transform.root.position, transform.rotation);
         Destroy(bloodfxCopy, 3f);
+
+        StartCoroutine(shakeManager.Shake());
+
+        //animator.SetTrigger("Jab Hit");
+        //animator.SetLayerWeight(3, 1);
         //healthbarImage.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0)
