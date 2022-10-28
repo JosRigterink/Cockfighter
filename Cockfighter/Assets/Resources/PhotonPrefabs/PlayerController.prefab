@@ -219,6 +219,9 @@ MonoBehaviour:
   ragdoll: {fileID: 5576696260803255739, guid: ce7f014bc3103e34e9a2e2430a9ccef9, type: 3}
   timer: 5
   knockbackForce: 2
+  blood: {fileID: 2939623063380349120, guid: ce3ca49fc70bf334aaa0f15de7be634a, type: 3}
+  hitfx: {fileID: 7356736258996936810, guid: ccd39d4e5abcdb7449c3ae5cac45698e, type: 3}
+  dash: {fileID: 5155199014899521887, guid: 2ec41ce11fa0da840b5255dc8146b18d, type: 3}
 --- !u!114 &4735908783202263543
 MonoBehaviour:
   m_ObjectHideFlags: 0

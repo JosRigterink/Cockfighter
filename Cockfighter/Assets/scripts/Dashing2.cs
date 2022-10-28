@@ -35,6 +35,7 @@ public class Dashing2 : MonoBehaviour
         while(Time.time < startTime + dashTime)
         {
             transform.Translate(moveScript.moveAmount * dashSpeed * Time.deltaTime);
+            moveScript.dashing();
             //moveScript.rb.AddForce(moveScript.moveAmount * dashSpeed, ForceMode.Impulse);
             dashCooldown = 3;
 

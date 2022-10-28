@@ -48,6 +48,7 @@ MonoBehaviour:
   - HealPu
   - RPC_Heal
   - RPC_DestroyForAll
+  - DashParticles
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

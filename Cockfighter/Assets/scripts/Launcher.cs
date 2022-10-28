@@ -152,4 +152,9 @@ public class Launcher : MonoBehaviourPunCallbacks
         currentmap = currentmapp;
         if (currentmap >= maps.Length) currentmap = 0;
     }
+
+    public void EnablePowerup()
+    {
+        powerUps = true;
+    }
 }
