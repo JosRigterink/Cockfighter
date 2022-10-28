@@ -20171,7 +20171,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 640, y: -61.336662}
+  m_AnchoredPosition: {x: 640, y: -61.33667}
   m_SizeDelta: {x: 1280, y: 122.673325}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &563241081
@@ -24981,7 +24981,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 102.4, y: -45}
+  m_AnchoredPosition: {x: 102.399994, y: -45}
   m_SizeDelta: {x: 172.8, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &699073467
@@ -27413,7 +27413,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 102.4, y: -45}
+  m_AnchoredPosition: {x: 102.399994, y: -45}
   m_SizeDelta: {x: 172.8, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &751698712
@@ -30339,7 +30339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 102.4, y: -45}
+  m_AnchoredPosition: {x: 102.399994, y: -45}
   m_SizeDelta: {x: 172.8, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &847721263
@@ -38054,7 +38054,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.6, y: -60}
+  m_AnchoredPosition: {x: 89.600006, y: -60}
   m_SizeDelta: {x: 179.2, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &925574099
@@ -50562,7 +50562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.6, y: -60}
+  m_AnchoredPosition: {x: 89.600006, y: -60}
   m_SizeDelta: {x: 179.2, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1237425970
@@ -57677,7 +57677,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.6, y: -60}
+  m_AnchoredPosition: {x: 89.600006, y: -60}
   m_SizeDelta: {x: 179.2, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1418641016
@@ -60275,7 +60275,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 102.4, y: -45}
+  m_AnchoredPosition: {x: 102.399994, y: -45}
   m_SizeDelta: {x: 172.8, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1511201224
@@ -62146,7 +62146,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 102.4, y: -45}
+  m_AnchoredPosition: {x: 102.399994, y: -45}
   m_SizeDelta: {x: 172.8, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539195076
@@ -71567,7 +71567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.6, y: -60}
+  m_AnchoredPosition: {x: 89.600006, y: -60}
   m_SizeDelta: {x: 179.2, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676041157
@@ -77085,7 +77085,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 102.4, y: -45}
+  m_AnchoredPosition: {x: 102.399994, y: -45}
   m_SizeDelta: {x: 172.8, y: 58}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1871742816
@@ -79347,7 +79347,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 89.6, y: -60}
+  m_AnchoredPosition: {x: 89.600006, y: -60}
   m_SizeDelta: {x: 179.2, y: 56}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1968424869
@@ -86693,7 +86693,7 @@ PrefabInstance:
     - target: {fileID: 3259099672685987090, guid: 4f7e73764895a8d4cbfae26c6d92d939,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3259099672685987094, guid: 4f7e73764895a8d4cbfae26c6d92d939,
         type: 3}
