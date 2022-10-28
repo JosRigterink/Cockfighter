@@ -45,6 +45,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public ParticleSystem dash;
 
     public TraumaInducer shakeManager;
+    public AudioSource hitAudio;
+    public AudioSource punchAudio;
 
     void Awake()
     {
@@ -173,6 +175,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         Destroy(hitfxCopy, 3f);
         GameObject bloodfxCopy = Instantiate(blood.gameObject, transform.root.position, transform.rotation);
         Destroy(bloodfxCopy, 3f);
+        hitAudio.Play();
+        punchAudio.Play();
 
         StartCoroutine(shakeManager.Shake());
 

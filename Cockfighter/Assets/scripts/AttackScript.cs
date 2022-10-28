@@ -21,6 +21,8 @@ public class AttackScript : MonoBehaviour
     public float leftAttackCooldown;
     public float blockCooldown;
 
+    public AudioSource attacksound;
+
     
 
     //public float damage;
@@ -53,6 +55,7 @@ public class AttackScript : MonoBehaviour
                     attackRight.SetActive(true);
                     Invoke("StopAttack", 0.5f);
                     Debug.Log("RightUppercut");
+                    attacksound.Play();
                 }
             else //Right Hook
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKey(KeyCode.RightArrow) && Input.GetKeyDown(KeyCode.E))
@@ -66,7 +69,8 @@ public class AttackScript : MonoBehaviour
                     attackRight.SetActive(true);
                     Invoke("StopAttack", 0.3f);
                     Debug.Log("RightHook");
-                }
+                    attacksound.Play();
+            }
              else //Right Jab
                 if (!isBlocking && Time.time > rightAttackCooldown && Input.GetKeyDown(KeyCode.E))
                 {
@@ -81,6 +85,7 @@ public class AttackScript : MonoBehaviour
                     //animator.SetLayerWeight(2, 0);
                     //animator.
                     Debug.Log("RightJab");
+                    attacksound.Play();
                 }
                 //Left Uppercut
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.UpArrow) && Input.GetKeyDown(KeyCode.Q))
@@ -94,6 +99,7 @@ public class AttackScript : MonoBehaviour
                     attackLeft.SetActive(true);
                     Invoke("StopAttack", 0.5f);
                     Debug.Log("LeftUppercut");
+                    attacksound.Play();
                 }
 
             else //Left Hook
@@ -108,6 +114,7 @@ public class AttackScript : MonoBehaviour
                     attackLeft.SetActive(true);
                     Invoke("StopAttack", 0.3f);
                     Debug.Log("LeftHook");
+                    attacksound.Play();
                 }
              else //Left Jab
                 if (!isBlocking && Time.time > leftAttackCooldown && Input.GetKeyDown(KeyCode.Q))
@@ -121,6 +128,7 @@ public class AttackScript : MonoBehaviour
                     attackLeft.SetActive(true);
                     Invoke("StopAttack", 0.1f);
                     Debug.Log("LeftJab");
+                    attacksound.Play();
                 }
             if (Time.time > blockCooldown && Input.GetKeyDown(KeyCode.Space))
             {
