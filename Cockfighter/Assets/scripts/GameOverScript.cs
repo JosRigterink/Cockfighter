@@ -25,7 +25,6 @@ public class GameOverScript : MonoBehaviour
     {
         if(gameHasEnded == true)
         {
-            //uiElements[1].SetActive(true);
             GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().enabled = false;
             Invoke("EndScreen", 3f);
         }
@@ -47,7 +46,6 @@ public class GameOverScript : MonoBehaviour
     [PunRPC]
     void RPC_EnableWinscreen()
     {
-        //uiElements[1].SetActive(true);
         gameTimer.GetComponent<Timer>().enabled = false;
         Cursor.lockState = CursorLockMode.None;
         uiElements[0].SetActive(true);
@@ -57,6 +55,7 @@ public class GameOverScript : MonoBehaviour
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().sprintSpeed = 0;
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().rb.freezeRotation = true;
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().attackScript.enabled = false;
+        GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().ui.SetActive(false);
         //GameObject.Find("PlayerController(Clone)").GetComponentInChildren<Animator>().enabled = false;
         GameObject.Find("PlayerController(Clone)").GetComponent<PlayerController>().enabled = false;
         Invoke("BackToMenu", 7f);
