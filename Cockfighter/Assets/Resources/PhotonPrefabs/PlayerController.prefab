@@ -356,7 +356,7 @@ MonoBehaviour:
   dash: {fileID: 5155199014899521887, guid: 2ec41ce11fa0da840b5255dc8146b18d, type: 3}
   shakeManager: {fileID: 7650060047959188853}
   hitAudio: {fileID: 5580956886685893774}
-  punchAudio: {fileID: 0}
+  punchAudio: {fileID: 2729262394312418906}
 --- !u!114 &4735908783202263543
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -417,7 +417,7 @@ MonoBehaviour:
   rightAttackCooldown: 0
   leftAttackCooldown: 0
   blockCooldown: 0
-  attacksound: {fileID: 0}
+  attacksound: {fileID: 5885964724681377269}
 --- !u!114 &6715145042395183463
 MonoBehaviour:
   m_ObjectHideFlags: 0
