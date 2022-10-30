@@ -21001,6 +21001,7 @@ MonoBehaviour:
     type: 3}
   startGameButton: {fileID: 1176996203}
   selectMapButton: {fileID: 1234075653}
+  toggleButton: {fileID: 1060404588}
   playerMoney: 0
   moneyText: {fileID: 2102037528}
   powerUps: 0

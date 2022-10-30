@@ -14,10 +14,12 @@ public class GameOverScript : MonoBehaviour
     public MultipleTarget followcam;
     PhotonView pv;
     public int playerMoney;
+    public int wins;
     void Awake()
     {
         pv = GetComponent<PhotonView>();
         playerMoney = PlayerPrefs.GetInt("PlayerMoney");
+        wins = PlayerPrefs.GetInt("Wins");
         followcam = GameObject.FindGameObjectWithTag("FollowCamera").GetComponent<MultipleTarget>();
     }
 
@@ -69,6 +71,8 @@ public class GameOverScript : MonoBehaviour
         //Debug.Log(money)
         playerMoney += 100;
         PlayerPrefs.SetInt("PlayerMoney", playerMoney);
+        wins++;
+        PlayerPrefs.SetInt("Wins", wins);
     }
     void DestroyAll()
     {
