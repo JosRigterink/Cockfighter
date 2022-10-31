@@ -11,7 +11,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
 {
     //[SerializeField] public Image healthbarImage;
     public Slider healthbarSlider;
-    [SerializeField] GameObject ui;
+    [SerializeField]  public GameObject ui;
 
     [SerializeField] public float sprintSpeed, walkSpeed, smoothTime;
 
@@ -40,7 +40,14 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public float timer;
     public float knockbackForce;
 
-   
+    public ParticleSystem blood;
+    public ParticleSystem hitfx;
+    public ParticleSystem dash;
+
+    public TraumaInducer shakeManager;
+    public AudioSource hitAudio;
+    public AudioSource punchAudio;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody>();
@@ -164,6 +171,17 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             rb.AddForce(-transform.forward * knockbackForce, ForceMode.Impulse);
         }
 
+        GameObject hitfxCopy = Instantiate(hitfx.gameObject, transform.root.position, transform.rotation);
+        Destroy(hitfxCopy, 3f);
+        GameObject bloodfxCopy = Instantiate(blood.gameObject, transform.root.position, transform.rotation);
+        Destroy(bloodfxCopy, 3f);
+        hitAudio.Play();
+        punchAudio.Play();
+
+        StartCoroutine(shakeManager.Shake());
+
+        //animator.SetTrigger("Jab Hit");
+        //animator.SetLayerWeight(3, 1);
         //healthbarImage.fillAmount = currentHealth / maxHealth;
 
         if (currentHealth <= 0)
@@ -221,5 +239,20 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             //healthbarImage.fillAmount = currentHealth / maxHealth;
             healthbarSlider.value = currentHealth;
         }
+    }
+
+    public void dashing()
+    {
+        if (PV.IsMine)
+        {
+            PV.RPC("DashParticles", RpcTarget.All);
+        }
+    }
+
+    [PunRPC]
+    public void DashParticles()
+    {
+        GameObject dashcopy = Instantiate(dash.gameObject, transform.root.position, transform.rotation);
+        Destroy(dashcopy, 3f);
     }
 }

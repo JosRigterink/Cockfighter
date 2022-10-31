@@ -30,6 +30,7 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject playerListItemPrefab;
     [SerializeField] GameObject startGameButton;
     [SerializeField] GameObject selectMapButton;
+    [SerializeField] GameObject toggleButton;
 
     [SerializeField] int playerMoney;
     [SerializeField] TMP_Text moneyText;
@@ -91,12 +92,14 @@ public class Launcher : MonoBehaviourPunCallbacks
 
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
         selectMapButton.SetActive(PhotonNetwork.IsMasterClient);
+        toggleButton.SetActive(PhotonNetwork.IsMasterClient);
     }
 
     public override void OnMasterClientSwitched(Player newMasterClient)
     {
         startGameButton.SetActive(PhotonNetwork.IsMasterClient);
         selectMapButton.SetActive(PhotonNetwork.IsMasterClient);
+        toggleButton.SetActive(PhotonNetwork.IsMasterClient);
     }
 
     public override void OnCreateRoomFailed(short returnCode, string message)
@@ -151,5 +154,10 @@ public class Launcher : MonoBehaviourPunCallbacks
     {
         currentmap = currentmapp;
         if (currentmap >= maps.Length) currentmap = 0;
+    }
+
+    public void EnablePowerup()
+    {
+        powerUps = true;
     }
 }
