@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Circus.unity
     guid: c4e7e12adb116a54cb19324b02ada720
+  - enabled: 1
+    path: Assets/Scenes/Trainingshal.unity
+    guid: 6c4f09190119a5d4285cd3071bdef4d8
   m_configObjects: {}
