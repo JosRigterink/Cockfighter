@@ -680,6 +680,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainMixer: {fileID: 24100000, guid: a0d137a7c2fc3b147a28fc0b8f5c0269, type: 2}
+  slider: {fileID: 0}
 --- !u!82 &3259099672685987114
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4650,7 +4651,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 140d0bc19b357324198276dab0b64740, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
-  m_Pitch: 0.5
+  m_Pitch: 1
   Loop: 0
   Mute: 0
   Spatialize: 0
