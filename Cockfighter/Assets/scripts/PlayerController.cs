@@ -53,7 +53,6 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
         rb = GetComponent<Rigidbody>();
         PV = GetComponent<PhotonView>();
         cameraFollowScript = GameObject.FindGameObjectWithTag("FollowCamera").GetComponent<MultipleTarget>();
-        //lookAtPoint = GameObject.FindGameObjectWithTag("LookTag");
 
         playerManager = PhotonView.Find((int)PV.InstantiationData[0]).GetComponent<PlayerManager>();
     }
