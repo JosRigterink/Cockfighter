@@ -79,7 +79,7 @@ public class GameOverScript : MonoBehaviour
         PhotonNetwork.DestroyAll();
     }
 
-    void BackToMenu()
+    public void BackToMenu()
     {
         gameObject.GetComponent<SceneSwitch>().enabled = true;
     }

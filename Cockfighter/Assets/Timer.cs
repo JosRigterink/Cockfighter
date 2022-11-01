@@ -14,6 +14,7 @@ public class Timer : MonoBehaviour
     [SerializeField] GameObject drawCanvas;
     [SerializeField] GameObject timeOutCanvas;
     [SerializeField] GameObject cameraFollow;
+    [SerializeField] GameOverScript gameoverscript;
     // Start is called before the first frame update
     void Start()
     {
@@ -62,5 +63,6 @@ public class Timer : MonoBehaviour
         {
             PhotonNetwork.DestroyAll();
         }
+        gameoverscript.Invoke("BackToMenu", 7f);
     }
 }
