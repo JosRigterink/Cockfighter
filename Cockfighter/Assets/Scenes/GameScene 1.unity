@@ -24785,6 +24785,21 @@ PrefabInstance:
       propertyPath: m_text
       value: +100
       objectReference: {fileID: 0}
+    - target: {fileID: 3259099674666180261, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1559482332311493188}
+    - target: {fileID: 3259099674666180261, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneSwitchingPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259099674666180261, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3259099674666180262, guid: 4f7e73764895a8d4cbfae26c6d92d939,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -24848,6 +24863,30 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1033250063}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1033250069 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3259099674196613533, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+    type: 3}
+  m_PrefabInstance: {fileID: 1033250063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1033250070 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3259099674666180263, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+    type: 3}
+  m_PrefabInstance: {fileID: 1033250063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1033250071
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1033250070}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceaa566050149714ab34fe7adbb4228c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1034550621
 GameObject:
   m_ObjectHideFlags: 0
@@ -52552,6 +52591,11 @@ PrefabInstance:
       objectReference: {fileID: 1033250065}
     - target: {fileID: 1559482332973072962, guid: 047a859e2ebc93a42ab631bb42859a03,
         type: 3}
+      propertyPath: uiElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559482332973072962, guid: 047a859e2ebc93a42ab631bb42859a03,
+        type: 3}
       propertyPath: uiElements.Array.data[0]
       value: 
       objectReference: {fileID: 1033250068}
@@ -52560,6 +52604,11 @@ PrefabInstance:
       propertyPath: uiElements.Array.data[1]
       value: 
       objectReference: {fileID: 1033250064}
+    - target: {fileID: 1559482332973072962, guid: 047a859e2ebc93a42ab631bb42859a03,
+        type: 3}
+      propertyPath: uiElements.Array.data[2]
+      value: 
+      objectReference: {fileID: 1033250069}
     - target: {fileID: 1559482332973072963, guid: 047a859e2ebc93a42ab631bb42859a03,
         type: 3}
       propertyPath: m_Name

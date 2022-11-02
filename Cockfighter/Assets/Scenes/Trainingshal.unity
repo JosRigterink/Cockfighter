@@ -11768,6 +11768,11 @@ PrefabInstance:
       objectReference: {fileID: 1750493977}
     - target: {fileID: 1559482332973072962, guid: 047a859e2ebc93a42ab631bb42859a03,
         type: 3}
+      propertyPath: uiElements.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1559482332973072962, guid: 047a859e2ebc93a42ab631bb42859a03,
+        type: 3}
       propertyPath: uiElements.Array.data[0]
       value: 
       objectReference: {fileID: 1750493980}
@@ -11776,6 +11781,11 @@ PrefabInstance:
       propertyPath: uiElements.Array.data[1]
       value: 
       objectReference: {fileID: 1750493981}
+    - target: {fileID: 1559482332973072962, guid: 047a859e2ebc93a42ab631bb42859a03,
+        type: 3}
+      propertyPath: uiElements.Array.data[2]
+      value: 
+      objectReference: {fileID: 1750493982}
     - target: {fileID: 1559482332973072963, guid: 047a859e2ebc93a42ab631bb42859a03,
         type: 3}
       propertyPath: m_Name
@@ -12116,6 +12126,21 @@ PrefabInstance:
       propertyPath: m_text
       value: +100
       objectReference: {fileID: 0}
+    - target: {fileID: 3259099674666180261, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1740974779}
+    - target: {fileID: 3259099674666180261, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SceneSwitchingPause
+      objectReference: {fileID: 0}
+    - target: {fileID: 3259099674666180261, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: GameOverScript, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 3259099674666180262, guid: 4f7e73764895a8d4cbfae26c6d92d939,
         type: 3}
       propertyPath: m_AnchorMax.y
@@ -12176,6 +12201,12 @@ GameObject:
 --- !u!1 &1750493981 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3259099673836819657, guid: 4f7e73764895a8d4cbfae26c6d92d939,
+    type: 3}
+  m_PrefabInstance: {fileID: 1750493976}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1750493982 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3259099674196613533, guid: 4f7e73764895a8d4cbfae26c6d92d939,
     type: 3}
   m_PrefabInstance: {fileID: 1750493976}
   m_PrefabAsset: {fileID: 0}

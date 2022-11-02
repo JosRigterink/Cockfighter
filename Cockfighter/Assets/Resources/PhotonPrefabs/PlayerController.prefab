@@ -1553,6 +1553,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   itemNameString: 
   itemPriceInt: 0
+  skinMenuButton: {fileID: 0}
+  shopMenuButton: {fileID: 0}
+  shopNumber: 0
+  manager: {fileID: 0}
   itemName: {fileID: 0}
   itemPrice: {fileID: 0}
 --- !u!1 &7857784059719319277

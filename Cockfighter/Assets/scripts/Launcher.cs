@@ -44,6 +44,8 @@ public class Launcher : MonoBehaviourPunCallbacks
     public int playerMoney;
     public TMP_Text moneyText;
     public bool powerUps;
+    public int winsint;
+    public TMP_Text winsText;
 
     void Awake()
     {
@@ -60,6 +62,9 @@ public class Launcher : MonoBehaviourPunCallbacks
         PlayerPrefs.GetInt("HoodieItem", 1);
         PlayerPrefs.GetInt("Sunglasses", 1);
         PlayerPrefs.GetInt("Bucket", 1);
+        winsint = PlayerPrefs.GetInt("Wins");
+        winsText.text = winsint.ToString();
+
 
         if (PlayerPrefs.GetInt("HoodieItem") == 1)
         {
