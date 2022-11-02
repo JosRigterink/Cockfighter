@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
     public ParticleSystem blood;
     public ParticleSystem hitfx;
     public ParticleSystem dash;
+    public ParticleSystem powerupHealing;
 
     public TraumaInducer shakeManager;
     public AudioSource hitAudio;
@@ -238,6 +239,8 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
             //healthbarImage.fillAmount = currentHealth / maxHealth;
             healthbarSlider.value = currentHealth;
         }
+        GameObject healingfx = Instantiate(powerupHealing.gameObject, transform.root.position, transform.rotation);
+        Destroy(healingfx, 1f);
     }
 
     public void dashing()
