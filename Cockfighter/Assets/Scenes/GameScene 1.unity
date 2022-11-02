@@ -52091,7 +52091,7 @@ PrefabInstance:
     - target: {fileID: 76251040779014665, guid: 5c2ab8dc82b0a9d4482a1f1689fecc19,
         type: 3}
       propertyPath: timeBetweenPowerups
-      value: 5
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 76251040779014665, guid: 5c2ab8dc82b0a9d4482a1f1689fecc19,
         type: 3}
