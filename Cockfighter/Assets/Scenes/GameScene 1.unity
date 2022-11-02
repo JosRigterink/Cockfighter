@@ -52080,6 +52080,21 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 76251040779014665, guid: 5c2ab8dc82b0a9d4482a1f1689fecc19,
         type: 3}
+      propertyPath: spawnrangeMax
+      value: 7.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 76251040779014665, guid: 5c2ab8dc82b0a9d4482a1f1689fecc19,
+        type: 3}
+      propertyPath: spawnrangeMin
+      value: -7.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 76251040779014665, guid: 5c2ab8dc82b0a9d4482a1f1689fecc19,
+        type: 3}
+      propertyPath: timeBetweenPowerups
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 76251040779014665, guid: 5c2ab8dc82b0a9d4482a1f1689fecc19,
+        type: 3}
       propertyPath: powerUps.Array.data[0]
       value: 
       objectReference: {fileID: 1451092477}

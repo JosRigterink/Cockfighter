@@ -354,6 +354,8 @@ MonoBehaviour:
   blood: {fileID: 2939623063380349120, guid: ce3ca49fc70bf334aaa0f15de7be634a, type: 3}
   hitfx: {fileID: 7356736258996936810, guid: ccd39d4e5abcdb7449c3ae5cac45698e, type: 3}
   dash: {fileID: 5155199014899521887, guid: 2ec41ce11fa0da840b5255dc8146b18d, type: 3}
+  powerupHealing: {fileID: 4056448755177316206, guid: 13550c6388c265249adb0444fa51d6e8,
+    type: 3}
   shakeManager: {fileID: 7650060047959188853}
   hitAudio: {fileID: 5580956886685893774}
   punchAudio: {fileID: 2729262394312418906}
