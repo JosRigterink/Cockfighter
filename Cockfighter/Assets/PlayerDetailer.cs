@@ -11,10 +11,35 @@ public class PlayerDetailer : MonoBehaviourPunCallbacks
     public string materialName;
     public string materialName2;
 
+    public GameObject hoodie;
+    public GameObject sunglasses;
+    public GameObject bucket;
+
+    public bool boolHoodie;
+    public bool boolSunglasses;
+    public bool boolBucket;
+
     public Material[] mats2;
 
     void Start()
     {
+        boolHoodie = (bool)photonView.Owner.CustomProperties["hoodie"];
+        boolSunglasses = (bool)photonView.Owner.CustomProperties["sunglasses"];
+        boolBucket = (bool)photonView.Owner.CustomProperties["bucket"];
+
+        if (boolHoodie == true)
+        {
+            hoodie.SetActive(true);
+        }
+        if (boolSunglasses == true)
+        {
+            sunglasses.SetActive(true);
+        }
+        if (boolBucket == true)
+        {
+            bucket.SetActive(true);
+        }
+
         mats2 = gameObject.GetComponentInChildren<SkinnedMeshRenderer>().materials;
 
         materials = Costumizer.materials;
@@ -37,9 +62,19 @@ public class PlayerDetailer : MonoBehaviourPunCallbacks
             {
                 mats2[2] = material2;
                 gameObject.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats2;
-                gameObject.GetComponentInChildren<MeshRenderer>().material.color = mats2[2].color;
+                
+                foreach (MeshRenderer meshRenderer in gameObject.GetComponentsInChildren<MeshRenderer>())
+                {
+                    foreach (Material mat in meshRenderer.materials)
+                    {
+                        mat.color = mats2[2].color;
+                    }
+                }
+                //gameObject.GetComponentInChildren<MeshRenderer>().material.color = mats2[2].color;
                 break;
             }
         }
+
+        
     }
 }

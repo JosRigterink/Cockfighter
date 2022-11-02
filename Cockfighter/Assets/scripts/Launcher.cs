@@ -5,6 +5,7 @@ using Photon.Pun;
 using TMPro;
 using Photon.Realtime;
 using System.Linq;
+using UnityEngine.UI;
 
 [System.Serializable]
 
@@ -32,8 +33,16 @@ public class Launcher : MonoBehaviourPunCallbacks
     [SerializeField] GameObject selectMapButton;
     [SerializeField] GameObject toggleButton;
 
-    [SerializeField] int playerMoney;
-    [SerializeField] TMP_Text moneyText;
+    public Button skinHoodieButton;
+    public Button skinSunglassesButton;
+    public Button skinBucketButton;
+    public Button shopHoodieButton;
+    public Button shopSunglassesButton;
+    public Button shopBucketButton;
+
+
+    public int playerMoney;
+    public TMP_Text moneyText;
     public bool powerUps;
 
     void Awake()
@@ -48,6 +57,25 @@ public class Launcher : MonoBehaviourPunCallbacks
         moneyText.text = playerMoney.ToString();
         Debug.Log("Connecting to Master");
         PhotonNetwork.ConnectUsingSettings();
+        PlayerPrefs.GetInt("HoodieItem", 1);
+        PlayerPrefs.GetInt("Sunglasses", 1);
+        PlayerPrefs.GetInt("Bucket", 1);
+
+        if (PlayerPrefs.GetInt("HoodieItem") == 1)
+        {
+            skinHoodieButton.interactable = true;
+            shopHoodieButton.interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Sunglasses") == 1)
+        {
+            skinSunglassesButton.interactable = true;
+            shopSunglassesButton.interactable = false;
+        }
+        if (PlayerPrefs.GetInt("Bucket") == 1)
+        {
+            skinBucketButton.interactable = true;
+            shopBucketButton.interactable = false;
+        }
     }
 
     public override void OnConnectedToMaster()
@@ -159,5 +187,22 @@ public class Launcher : MonoBehaviourPunCallbacks
     public void EnablePowerup()
     {
         powerUps = true;
+    }
+
+    public void EquipItem(GameObject item)
+    {
+        item.SetActive(true);
+    }
+    public void EquipItemMenu(GameObject item)
+    {
+        item.SetActive(true);
+    }
+    public void UnEquipItem(GameObject item)
+    {
+        item.SetActive(false);
+    }
+    public void UnEquipItemMenu(GameObject item)
+    {
+        item.SetActive(false);
     }
 }

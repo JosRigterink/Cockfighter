@@ -10,8 +10,15 @@ public class Costumizer : MonoBehaviour
     public GameObject chickenDummie;
     public GameObject chickenDummieMenu;
 
+    public bool enableHoodie;
+    public bool enableSunglasses;
+    public bool enableBucket;
+
     private PhotonHashTable hash = new PhotonHashTable();
     private PhotonHashTable hash2 = new PhotonHashTable();
+    private PhotonHashTable hash3 = new PhotonHashTable();
+    private PhotonHashTable hash4 = new PhotonHashTable();
+    private PhotonHashTable hash5 = new PhotonHashTable();
 
     public List<Material> colorMaterials;
     public List<Material> colorMaterials2;
@@ -28,6 +35,18 @@ public class Costumizer : MonoBehaviour
 
     public static Material[] mats;
 
+    public void EnableHoodie(bool booltje)
+    {
+        enableHoodie = booltje;
+    }
+    public void EnabledSunglasses(bool booltje)
+    {
+        enableSunglasses = booltje;
+    }
+    public void EnableBucket(bool booltje)
+    {
+        enableBucket = booltje;
+    }
     void Start()
     {
         mats = chickenDummie.GetComponentInChildren<SkinnedMeshRenderer>().materials;
@@ -76,8 +95,24 @@ public class Costumizer : MonoBehaviour
         chickenDummie.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats;
         chickenDummieMenu.GetComponentInChildren<SkinnedMeshRenderer>().materials = mats;
 
-        chickenDummie.GetComponentInChildren<MeshRenderer>().material.color = mats[2].color;
-        chickenDummieMenu.GetComponentInChildren<MeshRenderer>().material.color = mats[2].color;
+        foreach (MeshRenderer meshRenderer in chickenDummie.GetComponentsInChildren<MeshRenderer>())
+        {
+            foreach (Material material in meshRenderer.materials)
+            {
+                material.color = mats[2].color;
+            }
+        }
+        foreach (MeshRenderer meshRenderer in chickenDummieMenu.GetComponentsInChildren<MeshRenderer>())
+        {
+            foreach (Material material in meshRenderer.materials)
+            {
+                material.color = mats[2].color;
+            }
+        }
+
+        //hoodie.GetComponent<MeshRenderer>().materials[1].color = mats[2].color;
+        //chickenDummie.GetComponentInChildren<MeshRenderer>().material.color = mats[2].color;
+        //chickenDummieMenu.GetComponentInChildren<MeshRenderer>().material.color = mats[2].color;
 
         matIndex2 = index2;
         currentMaterialName2 = materialNames2[index2];
@@ -86,7 +121,6 @@ public class Costumizer : MonoBehaviour
             SetHash2();
         }
     }
-
     public void SetHash()
     {
         hash["material"] = currentMaterialName;
@@ -96,7 +130,13 @@ public class Costumizer : MonoBehaviour
     public void SetHash2()
     {
         hash2["material2"] = currentMaterialName2;
+        hash3["hoodie"] = enableHoodie;
+        hash4["sunglasses"] = enableSunglasses;
+        hash5["bucket"] = enableBucket;
         PhotonNetwork.LocalPlayer.SetCustomProperties(hash2);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash3);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash4);
+        PhotonNetwork.LocalPlayer.SetCustomProperties(hash5);
     }
 
     void Rotation()
