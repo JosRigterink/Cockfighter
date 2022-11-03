@@ -8,6 +8,11 @@ public class PurchaseManager : MonoBehaviour
     public ShopManager hoodie;
     public ShopManager sunglasses;
     public ShopManager bucket;
+
+    public GameObject hoodieImages;
+    public GameObject sunglassesImages;
+    public GameObject bucketImages;
+
     public int buyhoodie;
     public int buysunglasses;
     public int buybucket;
@@ -18,6 +23,7 @@ public class PurchaseManager : MonoBehaviour
             if (Launcher.Instance.playerMoney >= hoodie.itemPriceInt)
             {
                 hoodie.skinMenuButton.interactable = true;
+                hoodieImages.SetActive(true);
                 hoodie.shopMenuButton.interactable = false;
                 Launcher.Instance.playerMoney -= hoodie.itemPriceInt;
                 PlayerPrefs.SetInt("PlayerMoney", Launcher.Instance.playerMoney);
@@ -31,6 +37,7 @@ public class PurchaseManager : MonoBehaviour
             if (Launcher.Instance.playerMoney >= sunglasses.itemPriceInt)
             {
                 sunglasses.skinMenuButton.interactable = true;
+                sunglassesImages.SetActive(true);
                 sunglasses.shopMenuButton.interactable = false;
                 Launcher.Instance.playerMoney -= sunglasses.itemPriceInt;
                 PlayerPrefs.SetInt("PlayerMoney", Launcher.Instance.playerMoney);
@@ -44,6 +51,7 @@ public class PurchaseManager : MonoBehaviour
             if (Launcher.Instance.playerMoney >= bucket.itemPriceInt)
             {
                 bucket.skinMenuButton.interactable = true;
+                bucketImages.SetActive(true);
                 bucket.shopMenuButton.interactable = false;
                 Launcher.Instance.playerMoney -= bucket.itemPriceInt;
                 PlayerPrefs.SetInt("PlayerMoney", Launcher.Instance.playerMoney);

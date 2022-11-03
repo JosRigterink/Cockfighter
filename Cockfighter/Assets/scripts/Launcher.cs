@@ -40,6 +40,9 @@ public class Launcher : MonoBehaviourPunCallbacks
     public Button shopSunglassesButton;
     public Button shopBucketButton;
 
+    public GameObject hoodieImages;
+    public GameObject sunglassesImages;
+    public GameObject bucketImages;
 
     public int playerMoney;
     public TMP_Text moneyText;
@@ -69,16 +72,19 @@ public class Launcher : MonoBehaviourPunCallbacks
         if (PlayerPrefs.GetInt("HoodieItem") == 1)
         {
             skinHoodieButton.interactable = true;
+            hoodieImages.SetActive(true);
             shopHoodieButton.interactable = false;
         }
         if (PlayerPrefs.GetInt("Sunglasses") == 1)
         {
             skinSunglassesButton.interactable = true;
+            sunglassesImages.SetActive(true);
             shopSunglassesButton.interactable = false;
         }
         if (PlayerPrefs.GetInt("Bucket") == 1)
         {
             skinBucketButton.interactable = true;
+            bucketImages.SetActive(true);
             shopBucketButton.interactable = false;
         }
     }
