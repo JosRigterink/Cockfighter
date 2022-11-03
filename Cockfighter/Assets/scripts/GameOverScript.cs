@@ -7,6 +7,7 @@ using Photon.Pun;
 public class GameOverScript : MonoBehaviour
 {
     public bool hasWon;
+    public bool patat;
     public bool gameHasEnded;
     [SerializeField] GameObject gameOverCanvas;
     [SerializeField] GameObject gameTimer;
@@ -31,8 +32,32 @@ public class GameOverScript : MonoBehaviour
             Invoke("EndScreen", 3f);
         }
         gameHasEnded = false;
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (patat == true)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                uiElements[2].SetActive(false);
+                patat = false;
+            }
+            else if (patat == false)
+            {
+                Cursor.lockState = CursorLockMode.None;
+                uiElements[2].SetActive(true);
+                patat = true;
+            }
+        }
     }
-    
+
+    public void SceneSwitchingPause()
+    {
+        Destroy(RoomManager.Instance.gameObject);
+        PhotonNetwork.LeaveRoom();
+        PhotonNetwork.LoadLevel(0);
+        //PhotonNetwork.DestroyAll();
+    }
+
     void EndScreen()
     {
         followcam.enabled = false;

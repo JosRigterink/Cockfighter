@@ -201,7 +201,7 @@ public class PlayerController : MonoBehaviourPunCallbacks, IDamageable
                 child.gameObject.SetActive(false);
             }
             GameObject copy = PhotonNetwork.Instantiate(ragdoll.name, transform.localPosition + new Vector3(0, -1, 0), transform.localRotation);
-            //copy.GetComponentInChildren<Rigidbody>().AddForce(new Vector3(ragdoll.transform.localPosition.x, ragdoll.transform.localPosition.y + 5, ragdoll.transform.localPosition.z - 5));
+            //copy.GetComponentInChildren<Rigidbody>().AddForce(-transform.forward * 8, ForceMode.Impulse);
             
             GetComponent<PhotonTransformView>().enabled = false;
             walkSpeed = 0;
