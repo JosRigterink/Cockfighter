@@ -66,7 +66,7 @@ public class Launcher : MonoBehaviourPunCallbacks
         PlayerPrefs.GetInt("Sunglasses", 1);
         PlayerPrefs.GetInt("Bucket", 1);
         winsint = PlayerPrefs.GetInt("Wins");
-        winsText.text = winsint.ToString();
+        winsText.text = winsint.ToString() + " Wins";
 
 
         if (PlayerPrefs.GetInt("HoodieItem") == 1)
